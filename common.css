@@ -64,7 +64,6 @@ section {
   align-items: center;
   justify-content: center;
   overflow: auto;
-  background-color: #222;
   position: relative;
 }
 
@@ -114,7 +113,6 @@ image {
 }
 
 rect {
-  --scaled: min(1, calc(var(--value, 0) / var(--scale-factor)));
   --scaled: min(1, calc(var(--value, 0) / var(--scale-factor)));
   /* --a: calc(calc(var(--scaled) * 0.8) + 0.01); */
   --a: calc(calc(log(var(--scaled)) + 10) / 10);
