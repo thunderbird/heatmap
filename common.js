@@ -14,6 +14,12 @@ rangeInput.onchange = function() {
 }
 rangeInput.onchange();
 
+for (const rect of document.querySelectorAll("rect")) {
+  const value = parseInt(getComputedStyle(rect).getPropertyValue("--value"), 10);
+  const title = rect.appendChild(document.createElementNS("http://www.w3.org/2000/svg", "title"));
+  title.textContent = `${rect.id}\n${value}`;
+}
+
 function rgbToHex(r, g, b) {
   return "#" +
     parseInt(r, 10).toString(16).padStart(2, "0") +
