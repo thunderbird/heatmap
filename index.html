@@ -29,146 +29,219 @@
         <h2>Mail</h2>
       </header>
       <svg xmlns="http://www.w3.org/2000/svg" width="1280" height="800">
-        <g>
+        <g id="" transform="translate(0, 0)">
           <image href="images/mail.png" x="0" y="0" width="1280" height="800" />
           <rect id="mailbutton" x="7" y="7" width="30" height="30" />
           <rect id="addressbookbutton" x="7" y="52" width="30" height="30" />
           <rect id="calendarbutton" x="7" y="97" width="30" height="30" />
           <rect id="tasksbutton" x="7" y="142" width="30" height="30" />
           <rect id="chatbutton" x="7" y="187" width="30" height="30" />
-          <rect id="settingsbutton" x="7" y="718" width="30" height="30" />
+          <rect id="settingsbutton" x="7" y="718" width="30" height="30" class="clickable" onclick="togglePopup('settingscontextmenu');" />
           <rect id="collapsebutton" x="7" y="763" width="30" height="30" />
-          <rect id="button-appmenu" x="1163" y="6" width="35" height="30" />
-          <rect id="messenger-window-minimize-button" x="1202" y="11" width="23" height="20" />
-          <rect id="messenger-window-maximize-button" x="1225" y="11" width="26" height="20" />
-          <rect id="messenger-window-close-button" x="1251" y="11" width="23" height="20" />
-          <rect id="offline-status" x="49" y="779" width="20" height="22" />
-          <rect id="calendar-status-todaypane-button" x="1163" y="780" width="113" height="21" />
-          <rect id="folderpanemorebutton" x="246" y="52" width="30" height="30" />
-          <rect id="folderpanewritemessage" x="102" y="52" width="126" height="30" />
-          <rect id="folderpanegetmessages" x="54" y="52" width="30" height="30" />
-          <rect id="threadpanequickfilterbutton" x="1120" y="46" width="118" height="30" />
-          <rect id="threadpanedisplaybutton" x="1244" y="46" width="30" height="30" />
-          <rect id="qfb-sticky" x="292" y="86" width="36" height="30" />
-          <rect id="qfb-unread" x="791" y="87" width="35" height="28" />
-          <rect id="qfb-starred" x="826" y="87" width="35" height="28" />
-          <rect id="qfb-inaddrbook" x="861" y="87" width="35" height="28" />
-          <rect id="qfb-tags" x="896" y="87" width="35" height="28" />
-          <rect id="qfb-attachment" x="931" y="87" width="34" height="28" />
-          <rect id="qfb-qs-sender" x="411" y="123" width="65" height="24" />
-          <rect id="qfb-qs-recipients" x="475" y="123" width="85" height="24" />
-          <rect id="qfb-qs-subject" x="560" y="123" width="67" height="24" />
-          <rect id="qfb-qs-body" x="627" y="123" width="52" height="24" />
-          <rect id="tree-list-view-column-picker" x="1243" y="155" width="25" height="30" />
-          <rect id="hdrreplytosenderbutton" x="449" y="301" width="62" height="24" />
-          <rect id="hdrreplybutton" x="514" y="301" width="62" height="24" />
-          <rect id="hdrreplyallbutton" x="576" y="301" width="104" height="24" />
-          <rect id="hdrreplylistbutton" x="680" y="301" width="110" height="24" />
-          <rect id="hdrfollowupbutton" x="790" y="301" width="107" height="24" />
-          <rect id="hdrforwardbutton" x="900" y="301" width="79" height="24" />
-          <rect id="hdrarchivebutton" x="981" y="301" width="73" height="24" />
-          <rect id="hdrjunkbutton" x="1057" y="301" width="57" height="24" />
-          <rect id="hdrtrashbutton" x="1117" y="301" width="69" height="24" />
-          <rect id="otheractionsbutton" x="1189" y="301" width="57" height="24" />
+          <rect id="button-appmenu" x="1127" y="6" width="35" height="30" />
+          <rect id="messenger-window-minimize-button" x="1166" y="0" width="37" height="42" />
+          <rect id="messenger-window-maximize-button" x="1203" y="0" width="37" height="42" />
+          <rect id="messenger-window-close-button" x="1240" y="0" width="41" height="42" />
+          <rect id="today-closer" x="1280" y="43" width="4" height="4" />
+          <rect id="calendar-today-button-tooltip" x="1284" y="47" width="2" height="30" />
+          <rect id="calendar-nav-button-prev-tooltip-month" x="1290" y="47" width="2" height="30" />
+          <rect id="calendar-nav-button-next-tooltip-month" x="1290" y="47" width="2" height="30" />
+          <rect id="calendar-nav-button-prev-tooltip-year" x="1296" y="47" width="2" height="30" />
+          <rect id="calendar-nav-button-next-tooltip-year" x="1296" y="47" width="2" height="30" />
+          <rect id="previous-day-button" x="1280" y="43" width="8" height="8" />
+          <rect id="today-button" x="1280" y="43" width="8" height="8" />
+          <rect id="next-day-button" x="1280" y="43" width="8" height="8" />
+          <rect id="miniday-dropdown-button" x="1280" y="43" width="8" height="8" />
+          <rect id="todaypane-new-event-button" x="1281" y="47" width="8" height="8" />
+          <rect id="unifinder-task-edit-field" x="1280" y="44" width="12" height="30" />
+          <rect id="offline-status" x="49" y="779" width="20" height="21" />
+          <rect id="calendar-status-todaypane-button" x="1164" y="780" width="112" height="20" />
+          <rect id="folderpanemorebutton" x="246" y="52" width="30" height="30" class="clickable" onclick="togglePopup('folderpanemorecontext', 'foldermodescontextmenupopup');" />
+          <rect id="folderpanewritemessage" x="103" y="53" width="125" height="29" />
+          <rect id="folderpanegetmessages" x="54" y="52" width="30" height="30" class="clickable" onclick="togglePopup('folderpanegetmessagescontext');" />
+          <rect id="threadpanequickfilterbutton" x="1124" y="47" width="117" height="29" />
+          <rect id="threadpanedisplaybutton" x="1244" y="46" width="30" height="30" class="clickable" onclick="togglePopup('threadpanedisplaycontext', 'menu-threadpanesortpopup');" />
+          <rect id="qfb-sticky" x="292" y="86" width="36" height="29" />
+          <rect id="qfb-unread" x="791" y="87" width="35" height="27" />
+          <rect id="qfb-starred" x="826" y="87" width="35" height="27" />
+          <rect id="qfb-inaddrbook" x="861" y="87" width="35" height="27" />
+          <rect id="qfb-tags" x="896" y="87" width="35" height="27" />
+          <rect id="qfb-attachment" x="931" y="87" width="34" height="27" />
+          <rect id="qfb-qs-sender" x="409" y="122" width="64" height="24" />
+          <rect id="qfb-qs-recipients" x="473" y="122" width="84" height="24" />
+          <rect id="qfb-qs-subject" x="557" y="122" width="66" height="24" />
+          <rect id="qfb-qs-body" x="624" y="122" width="52" height="24" />
+          <rect id="folderpanemodebutton" x="249" y="343" width="30" height="30" class="clickable" onclick="togglePopup('folderpanemodecontext');" />
+          <rect id="hdrreplytosenderbutton" x="448" y="301" width="61" height="24" />
+          <rect id="hdrreplybutton" x="512" y="301" width="61" height="24" />
+          <rect id="hdrreplyallbutton" x="573" y="301" width="103" height="24" class="clickable" onclick="togglePopup('hdrreplyalldropdown');" />
+          <rect id="hdrreplylistbutton" x="676" y="301" width="108" height="24" class="clickable" onclick="togglePopup('hdrreplylistdropdown');" />
+          <rect id="hdrfollowupbutton" x="785" y="301" width="106" height="24" class="clickable" onclick="togglePopup('hdrfollowupdropdown');" />
+          <rect id="hdrforwardbutton" x="894" y="301" width="78" height="24" />
+          <rect id="hdrarchivebutton" x="975" y="301" width="73" height="24" />
+          <rect id="hdrjunkbutton" x="1051" y="301" width="61" height="24" />
+          <rect id="hdrtrashbutton" x="1115" y="301" width="68" height="24" />
+          <rect id="otheractionsbutton" x="1186" y="301" width="60" height="24" class="clickable" onclick="togglePopup('otheractionspopup');" />
           <rect id="starmessagebutton" x="1255" y="305" width="16" height="16" />
-          <rect id="message-header-address-in-address-book-button" x="456" y="336" width="14" height="14" />
-          <rect id="message-header-address-in-address-book-button" x="372" y="372" width="14" height="14" />
+          <rect id="message-header-address-not-in-address-book-button" x="454" y="335" width="14" height="14" />
+          <rect id="message-header-address-not-in-address-book-button" x="489" y="371" width="14" height="14" />
+          <circle cx="69" cy="67" r="12" data-popup="folderpanegetmessagescontext" />
+          <circle cx="261" cy="67" r="12" data-popup="folderpanemorecontext" />
+          <circle cx="1259" cy="61" r="12" data-popup="threadpanedisplaycontext" />
+          <circle cx="264" cy="358" r="12" data-popup="folderpanemodecontext" />
+          <circle cx="664.316650390625" cy="313" r="12" data-popup="hdrreplyalldropdown" />
+          <circle cx="772.7666015625" cy="313" r="12" data-popup="hdrreplylistdropdown" />
+          <circle cx="879.11669921875" cy="313" r="12" data-popup="hdrfollowupdropdown" />
+          <circle cx="1216.1083450317383" cy="313" r="12" data-popup="otheractionspopup" />
+          <circle cx="22" cy="733" r="12" data-popup="settingscontextmenu" />
         </g>
-        <g id="folderPaneGetMessagesContext" class="hidden-popup">
-          <image href="images/folderPaneGetMessagesContext.png" x="50" y="78" width="191" height="75" clip-path="url(#folderPaneGetMessagesContext-clip)" />
-          <clipPath id="folderPaneGetMessagesContext-clip">
-            <rect x="54" y="82" rx="8" width="183" height="67" />
+        <g id="folderpanegetmessagescontext" class="hidden-popup" transform="translate(50, 78)">
+          <clipPath id="folderpanegetmessagescontext-clip">
+            <rect x="4" y="4" rx="8" width="182" height="67" />
           </clipPath>
-          <rect id="itemgetallnewmessages" x="59" y="87" width="173" height="24" />
+          <image href="images/folderPaneGetMessagesContext.png" x="0" y="0" width="190" height="75" clip-path="url(#folderpanegetmessagescontext-clip)" />
+          <rect id="itemgetallnewmessages" x="9" y="9" width="172" height="24" />
         </g>
-        <circle cx="69" cy="67" r="12" data-popup="folderPaneGetMessagesContext" />
-        <g id="folderPaneMoreContext" class="hidden-popup">
-          <image href="images/folderPaneMoreContext.png" x="242" y="78" width="219" height="213" clip-path="url(#folderPaneMoreContext-clip)" />
-          <clipPath id="folderPaneMoreContext-clip">
-            <rect x="246" y="82" rx="8" width="211" height="205" />
+        <g id="folderpanemorecontext" class="hidden-popup" transform="translate(242, 78)">
+          <clipPath id="folderpanemorecontext-clip">
+            <rect x="4" y="4" rx="8" width="212" height="205" />
           </clipPath>
-          <rect id="folderpaneheadertogglegetmessages" x="251" y="120" width="201" height="24" />
-          <rect id="folderpaneheadertogglenewmessage" x="251" y="144" width="201" height="24" />
-          <rect id="folderpaneheadertoggletotalcount" x="251" y="177" width="201" height="24" />
-          <rect id="folderpaneheadertogglefoldersize" x="251" y="201" width="201" height="24" />
-          <rect id="folderpaneheadertogglelocalfolders" x="251" y="225" width="201" height="24" />
-          <rect id="folderpaneheaderhidemenuitem" x="251" y="258" width="201" height="24" />
+          <image href="images/folderPaneMoreContext.png" x="0" y="0" width="220" height="213" clip-path="url(#folderpanemorecontext-clip)" />
+          <rect id="folderpaneheadertogglegetmessages" x="9" y="42" width="202" height="24" />
+          <rect id="folderpaneheadertogglenewmessage" x="9" y="66" width="202" height="24" />
+          <rect id="folderpaneheadertoggletotalcount" x="9" y="99" width="202" height="24" />
+          <rect id="folderpaneheadertogglefoldersize" x="9" y="123" width="202" height="24" />
+          <rect id="folderpaneheadertogglelocalfolders" x="9" y="147" width="202" height="24" />
+          <rect id="folderpaneheaderhidemenuitem" x="9" y="180" width="202" height="24" />
+          <circle cx="109.75833129882812" cy="21" r="12" data-popup="foldermodescontextmenupopup" />
         </g>
-        <circle cx="261" cy="67" r="12" data-popup="folderPaneMoreContext" />
-        <g id="threadPaneDisplayContext" class="hidden-popup">
-          <image href="images/threadPaneDisplayContext.png" x="1071" y="72" width="213" height="132" clip-path="url(#threadPaneDisplayContext-clip)" />
-          <clipPath id="threadPaneDisplayContext-clip">
-            <rect x="1075" y="76" rx="8" width="205" height="124" />
+        <g id="foldermodescontextmenupopup" class="hidden-popup" transform="translate(449, 78)">
+          <clipPath id="foldermodescontextmenupopup-clip">
+            <rect x="4" y="4" rx="8" width="147" height="196" />
           </clipPath>
-          <rect id="threadpanetableview" x="1080" y="81" width="195" height="24" />
-          <rect id="threadpanecardsview" x="1080" y="105" width="195" height="24" />
-          <rect id="thread-pane-header-context-hide" x="1080" y="171" width="195" height="24" />
+          <image href="images/folderModesContextMenuPopup.png" x="0" y="0" width="155" height="204" clip-path="url(#foldermodescontextmenupopup-clip)" />
+          <rect id="folderpanemorecontextallfolders" x="9" y="9" width="137" height="24" />
+          <rect id="folderpanemorecontextunifiedfolders" x="9" y="33" width="137" height="24" />
+          <rect id="folderpanemorecontextunreadfolders" x="9" y="57" width="137" height="24" />
+          <rect id="folderpanemorecontextfavoritefolders" x="9" y="81" width="137" height="24" />
+          <rect id="folderpanemorecontextrecentfolders" x="9" y="105" width="137" height="24" />
+          <rect id="folderpanemorecontexttags" x="9" y="138" width="137" height="24" />
+          <rect id="folderpanemorecontextcompacttoggle" x="9" y="171" width="137" height="24" />
         </g>
-        <circle cx="1259" cy="61" r="12" data-popup="threadPaneDisplayContext" />
-        <g id="folderPaneModeContext" class="hidden-popup">
-          <image href="images/folderPaneModeContext.png" x="245" y="351" width="144" height="99" clip-path="url(#folderPaneModeContext-clip)" />
-          <clipPath id="folderPaneModeContext-clip">
-            <rect x="249" y="355" rx="8" width="136" height="91" />
+        <g id="threadpanedisplaycontext" class="hidden-popup" transform="translate(1066, 72)">
+          <clipPath id="threadpanedisplaycontext-clip">
+            <rect x="4" y="4" rx="8" width="205" height="124" />
           </clipPath>
-          <rect id="folderpanemodemoveup" x="254" y="360" width="126" height="24" />
-          <rect id="folderpanemodemovedown" x="254" y="384" width="126" height="24" />
-          <rect id="compactfolderbutton" x="254" y="417" width="126" height="24" />
+          <image href="images/threadPaneDisplayContext.png" x="0" y="0" width="213" height="132" clip-path="url(#threadpanedisplaycontext-clip)" />
+          <rect id="threadpanetableview" x="9" y="9" width="195" height="24" />
+          <rect id="threadpanecardsview" x="9" y="33" width="195" height="24" />
+          <rect id="thread-pane-header-context-hide" x="9" y="99" width="195" height="24" />
+          <circle cx="106.34166717529297" cy="78" r="12" data-popup="menu-threadpanesortpopup" />
         </g>
-        <circle cx="264" cy="340" r="12" data-popup="folderPaneModeContext" />
-        <g id="hdrReplyAllDropdown" class="hidden-popup">
-          <image href="images/hdrReplyAllDropdown.png" x="572" y="321" width="99" height="66" clip-path="url(#hdrReplyAllDropdown-clip)" />
-          <clipPath id="hdrReplyAllDropdown-clip">
-            <rect x="576" y="325" rx="8" width="91" height="58" />
+        <g id="menu-threadpanesortpopup" class="hidden-popup" transform="translate(922, 129)">
+          <clipPath id="menu-threadpanesortpopup-clip">
+            <rect x="4" y="4" rx="8" width="149" height="508" />
           </clipPath>
-          <rect id="hdrreplyall-replyallsubbutton" x="581" y="330" width="81" height="24" />
-          <rect id="hdrreplysubbutton" x="581" y="354" width="81" height="24" />
+          <image href="images/menu_threadPaneSortPopup.png" x="0" y="0" width="157" height="516" clip-path="url(#menu-threadpanesortpopup-clip)" />
+          <rect id="threadpanesortbydatemenuitem" x="9" y="9" width="139" height="24" />
+          <rect id="threadpanesortbyreceivedmenuitem" x="9" y="33" width="139" height="24" />
+          <rect id="threadpanesortbyflagmenuitem" x="9" y="57" width="139" height="24" />
+          <rect id="threadpanesortbyorderreceivedmenuitem" x="9" y="81" width="139" height="24" />
+          <rect id="threadpanesortbyprioritymenuitem" x="9" y="105" width="139" height="24" />
+          <rect id="threadpanesortbyfrommenuitem" x="9" y="129" width="139" height="24" />
+          <rect id="threadpanesortbyrecipientmenuitem" x="9" y="153" width="139" height="24" />
+          <rect id="threadpanesortbycorrespondentmenuitem" x="9" y="177" width="139" height="24" />
+          <rect id="threadpanesortbysizemenuitem" x="9" y="201" width="139" height="24" />
+          <rect id="threadpanesortbystatusmenuitem" x="9" y="225" width="139" height="24" />
+          <rect id="threadpanesortbysubjectmenuitem" x="9" y="249" width="139" height="24" />
+          <rect id="threadpanesortbyunreadmenuitem" x="9" y="273" width="139" height="24" />
+          <rect id="threadpanesortbytagsmenuitem" x="9" y="297" width="139" height="24" />
+          <rect id="threadpanesortbyjunkstatusmenuitem" x="9" y="321" width="139" height="24" />
+          <rect id="threadpanesortbyattachmentsmenuitem" x="9" y="345" width="139" height="24" />
+          <rect id="threadpanesortascending" x="9" y="378" width="139" height="24" />
+          <rect id="threadpanesortdescending" x="9" y="402" width="139" height="24" />
+          <rect id="threadpanesortthreaded" x="9" y="435" width="139" height="24" />
+          <rect id="threadpanesortunthreaded" x="9" y="459" width="139" height="24" />
+          <rect id="threadpanegroupbysort" x="9" y="483" width="139" height="24" />
         </g>
-        <circle cx="668" cy="313" r="12" data-popup="hdrReplyAllDropdown" />
-        <g id="hdrReplyListDropdown" class="hidden-popup">
-          <image href="images/hdrReplyListDropdown.png" x="677" y="321" width="105" height="90" clip-path="url(#hdrReplyListDropdown-clip)" />
-          <clipPath id="hdrReplyListDropdown-clip">
-            <rect x="681" y="325" rx="8" width="97" height="82" />
+        <g id="folderpanemodecontext" class="hidden-popup" transform="translate(245, 369)">
+          <clipPath id="folderpanemodecontext-clip">
+            <rect x="4" y="4" rx="8" width="137" height="91" />
           </clipPath>
-          <rect id="hdrreplylist-replylistsubbutton" x="686" y="330" width="87" height="24" />
-          <rect id="hdrrelplylist-replyallsubbutton" x="686" y="354" width="87" height="24" />
-          <rect id="hdrreplylist-replysubbutton" x="686" y="378" width="87" height="24" />
+          <image href="images/folderPaneModeContext.png" x="0" y="0" width="145" height="99" clip-path="url(#folderpanemodecontext-clip)" />
+          <rect id="folderpanemodemoveup" x="9" y="9" width="127" height="24" />
+          <rect id="folderpanemodemovedown" x="9" y="33" width="127" height="24" />
+          <rect id="compactfolderbutton" x="9" y="66" width="127" height="24" />
         </g>
-        <circle cx="778" cy="313" r="12" data-popup="hdrReplyListDropdown" />
-        <g id="hdrFollowupDropdown" class="hidden-popup">
-          <image href="images/hdrFollowupDropdown.png" x="786" y="321" width="102" height="90" clip-path="url(#hdrFollowupDropdown-clip)" />
-          <clipPath id="hdrFollowupDropdown-clip">
-            <rect x="790" y="325" rx="8" width="94" height="82" />
+        <g id="hdrreplyalldropdown" class="hidden-popup" transform="translate(569, 321)">
+          <clipPath id="hdrreplyalldropdown-clip">
+            <rect x="4" y="4" rx="8" width="82" height="62" />
           </clipPath>
-          <rect id="hdrfollowup-followupsubbutton" x="795" y="330" width="84" height="24" />
-          <rect id="hdrfollowup-replyallsubbutton" x="795" y="354" width="84" height="24" />
-          <rect id="hdrfollowup-replysubbutton" x="795" y="378" width="84" height="24" />
+          <image href="images/hdrReplyAllDropdown.png" x="0" y="0" width="90" height="70" clip-path="url(#hdrreplyalldropdown-clip)" />
+          <rect id="hdrreplyall-replyallsubbutton" x="9" y="9" width="72" height="24" />
+          <rect id="hdrreplysubbutton" x="9" y="37" width="72" height="24" />
         </g>
-        <circle cx="885" cy="313" r="12" data-popup="hdrFollowupDropdown" />
-        <g id="otherActionsPopup" class="hidden-popup">
-          <image href="images/otherActionsPopup.png" x="1111" y="321" width="174" height="285" clip-path="url(#otherActionsPopup-clip)" />
-          <clipPath id="otherActionsPopup-clip">
-            <rect x="1115" y="325" rx="8" width="166" height="277" />
+        <g id="hdrreplylistdropdown" class="hidden-popup" transform="translate(673, 321)">
+          <clipPath id="hdrreplylistdropdown-clip">
+            <rect x="4" y="4" rx="8" width="85" height="86" />
           </clipPath>
-          <rect id="otheractionsredirect" x="1120" y="330" width="156" height="24" />
-          <rect id="markasunreadmenuitem" x="1120" y="387" width="156" height="24" />
-          <rect id="saveasmenuitem" x="1120" y="411" width="156" height="24" />
-          <rect id="otheractionsprint" x="1120" y="435" width="156" height="24" />
-          <rect id="viewsourcemenuitem" x="1120" y="492" width="156" height="24" />
-          <rect id="charsetrepairmenuitem" x="1120" y="516" width="156" height="24" />
-          <rect id="messageheadermoremenucustomize" x="1120" y="573" width="156" height="24" />
+          <image href="images/hdrReplyListDropdown.png" x="0" y="0" width="93" height="94" clip-path="url(#hdrreplylistdropdown-clip)" />
+          <rect id="hdrreplylist-replylistsubbutton" x="9" y="9" width="75" height="24" />
+          <rect id="hdrrelplylist-replyallsubbutton" x="9" y="37" width="75" height="24" />
+          <rect id="hdrreplylist-replysubbutton" x="9" y="61" width="75" height="24" />
         </g>
-        <circle cx="1217" cy="313" r="12" data-popup="otherActionsPopup" />
-        <g id="settingsContextMenu" class="hidden-popup">
-          <image href="images/settingsContextMenu.png" x="20" y="612" width="162" height="123" clip-path="url(#settingsContextMenu-clip)" />
-          <clipPath id="settingsContextMenu-clip">
-            <rect x="24" y="616" rx="8" width="154" height="115" />
+        <g id="hdrfollowupdropdown" class="hidden-popup" transform="translate(781, 321)">
+          <clipPath id="hdrfollowupdropdown-clip">
+            <rect x="4" y="4" rx="8" width="83" height="86" />
           </clipPath>
-          <rect id="settingscontextopensettingsitem" x="29" y="621" width="144" height="24" />
-          <rect id="settingscontextopenaccountsettingsitem" x="29" y="645" width="144" height="24" />
-          <rect id="settingscontextopenaddonsitem" x="29" y="669" width="144" height="24" />
-          <rect id="settingscontextopencustomizeitem" x="29" y="702" width="144" height="24" />
+          <image href="images/hdrFollowupDropdown.png" x="0" y="0" width="91" height="94" clip-path="url(#hdrfollowupdropdown-clip)" />
+          <rect id="hdrfollowup-followupsubbutton" x="9" y="9" width="73" height="24" />
         </g>
-        <circle cx="22" cy="733" r="12" data-popup="settingsContextMenu" />
+        <g id="otheractionspopup" class="hidden-popup" transform="translate(1121, 321)">
+          <clipPath id="otheractionspopup-clip">
+            <rect x="4" y="4" rx="8" width="155" height="301" />
+          </clipPath>
+          <image href="images/otherActionsPopup.png" x="0" y="0" width="163" height="309" clip-path="url(#otheractionspopup-clip)" />
+          <rect id="otheractionsredirect" x="9" y="9" width="145" height="24" />
+          <rect id="otheractionstag" x="9" y="42" width="145" height="24" class="clickable" onclick="togglePopup('hdrtagdropdown');" />
+          <rect id="markasunreadmenuitem" x="9" y="66" width="145" height="24" />
+          <rect id="saveasmenuitem" x="9" y="90" width="145" height="24" />
+          <rect id="otheractionsprint" x="9" y="114" width="145" height="24" />
+          <rect id="viewsourcemenuitem" x="9" y="195" width="145" height="24" />
+          <rect id="charsetrepairmenuitem" x="9" y="219" width="145" height="24" />
+          <rect id="otheractionsmessagebodyas" x="9" y="243" width="145" height="24" class="clickable" onclick="togglePopup('hdrmessagebodyasdropdown');" />
+          <rect id="messageheadermoremenucustomize" x="9" y="276" width="145" height="24" />
+          <circle cx="81.48332977294922" cy="54" r="12" data-popup="hdrtagdropdown" />
+          <circle cx="81.48332977294922" cy="255" r="12" data-popup="hdrmessagebodyasdropdown" />
+        </g>
+        <g id="hdrtagdropdown" class="hidden-popup" transform="translate(953, 354)">
+          <clipPath id="hdrtagdropdown-clip">
+            <rect x="4" y="4" rx="8" width="173" height="220" />
+          </clipPath>
+          <image href="images/hdrTagDropdown.png" x="0" y="0" width="181" height="228" clip-path="url(#hdrtagdropdown-clip)" />
+          <rect id="hdrtagdropdown-addnewtag" x="9" y="9" width="163" height="24" />
+          <rect id="managetags" x="9" y="33" width="163" height="24" />
+          <rect id="hdrtagdropdown-tagremoveall" x="9" y="66" width="163" height="24" />
+        </g>
+        <g id="hdrmessagebodyasdropdown" class="hidden-popup" transform="translate(990, 555)">
+          <clipPath id="hdrmessagebodyasdropdown-clip">
+            <rect x="4" y="4" rx="8" width="136" height="82" />
+          </clipPath>
+          <image href="images/hdrMessageBodyAsDropdown.png" x="0" y="0" width="144" height="90" clip-path="url(#hdrmessagebodyasdropdown-clip)" />
+          <rect id="otheractionsmenu-bodyallowhtml" x="9" y="9" width="126" height="24" />
+          <rect id="otheractionsmenu-bodysanitized" x="9" y="33" width="126" height="24" />
+          <rect id="otheractionsmenu-bodyasplaintext" x="9" y="57" width="126" height="24" />
+        </g>
+        <g id="settingscontextmenu" class="hidden-popup" transform="translate(20, 612)">
+          <clipPath id="settingscontextmenu-clip">
+            <rect x="4" y="4" rx="8" width="153" height="115" />
+          </clipPath>
+          <image href="images/settingsContextMenu.png" x="0" y="0" width="161" height="123" clip-path="url(#settingscontextmenu-clip)" />
+          <rect id="settingscontextopensettingsitem" x="9" y="9" width="143" height="24" />
+          <rect id="settingscontextopenaccountsettingsitem" x="9" y="33" width="143" height="24" />
+          <rect id="settingscontextopenaddonsitem" x="9" y="57" width="143" height="24" />
+          <rect id="settingscontextopencustomizeitem" x="9" y="90" width="143" height="24" />
+        </g>
       </svg>
     </section>
     <section>
@@ -176,169 +249,144 @@
         <h2>Compose</h2>
       </header>
       <svg xmlns="http://www.w3.org/2000/svg" width="1280" height="800">
-        <g>
+        <g id="">
           <image href="images/compose.png" x="0" y="0" width="1280" height="800" />
-          <rect id="button-send" x="4" y="64" width="62" height="24" />
-          <rect id="button-encryption" x="71" y="64" width="79" height="24" />
-          <rect id="spellingbutton" x="152" y="64" width="103" height="24" />
-          <rect id="cmd-spelling" x="152" y="64" width="79" height="24" />
-          <rect id="button-save" x="257" y="64" width="83" height="24" />
-          <rect id="cmd-savedefault" x="257" y="64" width="59" height="24" />
-          <rect id="button-contacts" x="342" y="64" width="85" height="24" />
-          <rect id="button-attach" x="1181" y="64" width="95" height="24" />
-          <rect id="cmd-attachfile" x="1181" y="64" width="71" height="24" />
-          <rect id="addr-ccshowaddressrowbutton" x="531" y="107" width="22" height="20" />
-          <rect id="addr-bccshowaddressrowbutton" x="565" y="107" width="29" height="20" />
-          <rect id="extraaddressrowsmenubutton" x="606" y="107" width="20" height="20" />
-          <rect id="toaddrinput" x="144" y="142" width="1123" height="24" />
-          <rect id="msgsubject" x="139" y="175" width="1133" height="30" />
-          <rect id="absolutefontsizebutton" x="264" y="214" width="24" height="24" />
-          <rect id="decreasefontsizebutton" x="290" y="214" width="24" height="24" />
-          <rect id="increasefontsizebutton" x="316" y="214" width="24" height="24" />
-          <rect id="boldbutton" x="345" y="214" width="24" height="24" />
-          <rect id="italicbutton" x="371" y="214" width="24" height="24" />
-          <rect id="underlinebutton" x="397" y="214" width="24" height="24" />
-          <rect id="removestylingbutton" x="426" y="214" width="24" height="24" />
-          <rect id="ulbutton" x="455" y="214" width="24" height="24" />
-          <rect id="olbutton" x="481" y="214" width="24" height="24" />
-          <rect id="outdentbutton" x="507" y="214" width="24" height="24" />
-          <rect id="indentbutton" x="533" y="214" width="24" height="24" />
-          <rect id="alignpopupbutton" x="562" y="214" width="35" height="24" />
-          <rect id="insertpopupbutton" x="599" y="214" width="35" height="24" />
-          <rect id="smilebuttonmenu" x="636" y="214" width="35" height="24" />
+          <rect id="button-send" x="4" y="62" width="62" height="24" />
+          <rect id="button-encryption" x="71" y="62" width="78" height="24" />
+          <rect id="spellingbutton" x="151" y="62" width="103" height="24" class="clickable" onclick="togglePopup('languagemenulist');" />
+          <rect id="cmd-spelling" x="151" y="62" width="79" height="24" />
+          <rect id="button-save" x="256" y="62" width="83" height="24" class="clickable" onclick="togglePopup('button-savepopup');" />
+          <rect id="cmd-savedefault" x="256" y="62" width="59" height="24" />
+          <rect id="button-contacts" x="340" y="62" width="85" height="24" />
+          <rect id="button-attach" x="1181" y="62" width="95" height="24" class="clickable" onclick="togglePopup('button-attachpopup');" />
+          <rect id="cmd-attachfile" x="1181" y="62" width="71" height="24" />
+          <rect id="addr-ccshowaddressrowbutton" x="529" y="107" width="22" height="19" />
+          <rect id="addr-bccshowaddressrowbutton" x="563" y="107" width="29" height="19" />
+          <rect id="extraaddressrowsmenubutton" x="604" y="106" width="20" height="20" />
+          <rect id="toaddrinput" x="140" y="142" width="1131" height="23" />
+          <rect id="msgsubject" x="139" y="174" width="1133" height="30" />
+          <rect id="paragraphselect" x="5" y="211" width="94" height="24" class="clickable" onclick="togglePopup('paragraphpopup');" />
+          <rect id="fontfaceselect" x="103" y="211" width="120" height="24" class="clickable" onclick="togglePopup('fontfacepopup');" />
+          <rect id="absolutefontsizebutton" x="262" y="211" width="24" height="24" />
+          <rect id="decreasefontsizebutton" x="288" y="211" width="24" height="24" />
+          <rect id="increasefontsizebutton" x="314" y="211" width="24" height="24" />
+          <rect id="boldbutton" x="343" y="211" width="24" height="24" />
+          <rect id="italicbutton" x="369" y="211" width="24" height="24" />
+          <rect id="underlinebutton" x="395" y="211" width="24" height="24" />
+          <rect id="removestylingbutton" x="424" y="211" width="24" height="24" />
+          <rect id="ulbutton" x="453" y="211" width="24" height="24" />
+          <rect id="olbutton" x="479" y="211" width="24" height="24" />
+          <rect id="outdentbutton" x="505" y="211" width="24" height="24" />
+          <rect id="indentbutton" x="531" y="211" width="24" height="24" />
+          <rect id="alignpopupbutton" x="560" y="211" width="39" height="24" class="clickable" onclick="togglePopup('alignpopup');" />
+          <rect id="insertpopupbutton" x="601" y="211" width="39" height="24" class="clickable" onclick="togglePopup('insertpopup');" />
+          <rect id="smilebuttonmenu" x="642" y="211" width="39" height="24" class="clickable" onclick="togglePopup('smileypopup');" />
+          <circle cx="241.54998779296875" cy="74.33331298828125" r="12" data-popup="languagemenulist" />
+          <circle cx="326.23333740234375" cy="74.33331298828125" r="12" data-popup="button-savepopup" />
+          <circle cx="1264" cy="74.33331298828125" r="12" data-popup="button-attachpopup" />
+          <circle cx="51.775001525878906" cy="223.33331298828125" r="12" data-popup="paragraphpopup" />
+          <circle cx="162.75831604003906" cy="223.33331298828125" r="12" data-popup="fontfacepopup" />
+          <circle cx="579.4666748046875" cy="223.33331298828125" r="12" data-popup="alignpopup" />
+          <circle cx="620.4666748046875" cy="223.33331298828125" r="12" data-popup="insertpopup" />
+          <circle cx="661.4666748046875" cy="223.33331298828125" r="12" data-popup="smileypopup" />
         </g>
-        <g id="languageMenuList" class="hidden-popup">
-          <image href="images/languageMenuList.png" x="148" y="84" width="204" height="75" clip-path="url(#languageMenuList-clip)" />
-          <clipPath id="languageMenuList-clip">
-            <rect x="152" y="88" rx="8" width="196" height="67" />
+        <g id="languagemenulist" class="hidden-popup" transform="translate(147, 83)">
+          <clipPath id="languagemenulist-clip">
+            <rect x="4" y="4" rx="8" width="186" height="67" />
           </clipPath>
-          <rect id="spell-add-dictionaries" x="157" y="126" width="186" height="24" />
+          <image href="images/languageMenuList.png" x="0" y="0" width="194" height="75" clip-path="url(#languagemenulist-clip)" />
+          <rect id="spell-add-dictionaries" x="9" y="42" width="176" height="24" />
         </g>
-        <circle cx="243" cy="76" r="12" data-popup="languageMenuList" />
-        <g id="button-savePopup" class="hidden-popup">
-          <image href="images/button-savePopup.png" x="253" y="84" width="124" height="99" clip-path="url(#button-savePopup-clip)" />
-          <clipPath id="button-savePopup-clip">
-            <rect x="257" y="88" rx="8" width="116" height="91" />
+        <g id="button-savepopup" class="hidden-popup" transform="translate(252, 83)">
+          <clipPath id="button-savepopup-clip">
+            <rect x="4" y="4" rx="8" width="107" height="91" />
           </clipPath>
-          <rect id="savepopup-saveasfile" x="262" y="93" width="106" height="24" />
-          <rect id="savepopup-saveasdraft" x="262" y="126" width="106" height="24" />
-          <rect id="savepopup-saveastemplate" x="262" y="150" width="106" height="24" />
+          <image href="images/button-savePopup.png" x="0" y="0" width="115" height="99" clip-path="url(#button-savepopup-clip)" />
+          <rect id="savepopup-saveasfile" x="9" y="9" width="97" height="24" />
+          <rect id="savepopup-saveasdraft" x="9" y="42" width="97" height="24" />
+          <rect id="savepopup-saveastemplate" x="9" y="66" width="97" height="24" />
         </g>
-        <circle cx="328" cy="76" r="12" data-popup="button-savePopup" />
-        <g id="button-attachPopup" class="hidden-popup">
-          <image href="images/button-attachPopup.png" x="1072" y="84" width="212" height="156" clip-path="url(#button-attachPopup-clip)" />
-          <clipPath id="button-attachPopup-clip">
-            <rect x="1076" y="88" rx="8" width="204" height="148" />
+        <g id="button-attachpopup" class="hidden-popup" transform="translate(1082, 83)">
+          <clipPath id="button-attachpopup-clip">
+            <rect x="4" y="4" rx="8" width="194" height="148" />
           </clipPath>
-          <rect id="button-attachpopup-attachfileitem" x="1081" y="93" width="194" height="24" />
-          <rect id="button-attachpopup-attachpageitem" x="1081" y="117" width="194" height="24" />
-          <rect id="button-attachpopup-attachvcarditem" x="1081" y="150" width="194" height="24" />
-          <rect id="button-attachpopup-attachpublickey" x="1081" y="174" width="194" height="24" />
-          <rect id="button-attachpopup-remindlateritem" x="1081" y="207" width="194" height="24" />
+          <image href="images/button-attachPopup.png" x="0" y="0" width="202" height="156" clip-path="url(#button-attachpopup-clip)" />
+          <rect id="button-attachpopup-attachfileitem" x="9" y="9" width="184" height="24" />
+          <rect id="button-attachpopup-attachpageitem" x="9" y="33" width="184" height="24" />
+          <rect id="button-attachpopup-attachvcarditem" x="9" y="66" width="184" height="24" />
+          <rect id="button-attachpopup-attachpublickey" x="9" y="90" width="184" height="24" />
+          <rect id="button-attachpopup-remindlateritem" x="9" y="123" width="184" height="24" />
         </g>
-        <circle cx="1264" cy="76" r="12" data-popup="button-attachPopup" />
-        <g id="ParagraphPopup" class="hidden-popup">
-          <image href="images/ParagraphPopup.png" x="1" y="234" width="111" height="258" clip-path="url(#ParagraphPopup-clip)" />
-          <clipPath id="ParagraphPopup-clip">
-            <rect x="5" y="238" rx="8" width="103" height="250" />
+        <g id="paragraphpopup" class="hidden-popup" transform="translate(1, 232)">
+          <clipPath id="paragraphpopup-clip">
+            <rect x="4" y="4" rx="8" width="102" height="250" />
           </clipPath>
-          <rect id="toolbarmenu-bodytext" x="10" y="243" width="93" height="24" />
-          <rect id="toolbarmenu-paragraph" x="10" y="267" width="93" height="24" />
-          <rect id="toolbarmenu-h1" x="10" y="291" width="93" height="24" />
-          <rect id="toolbarmenu-h2" x="10" y="315" width="93" height="24" />
-          <rect id="toolbarmenu-h3" x="10" y="339" width="93" height="24" />
-          <rect id="toolbarmenu-h4" x="10" y="363" width="93" height="24" />
-          <rect id="toolbarmenu-h5" x="10" y="387" width="93" height="24" />
-          <rect id="toolbarmenu-h6" x="10" y="411" width="93" height="24" />
-          <rect id="toolbarmenu-address" x="10" y="435" width="93" height="24" />
-          <rect id="toolbarmenu-pre" x="10" y="459" width="93" height="24" />
+          <image href="images/ParagraphPopup.png" x="0" y="0" width="110" height="258" clip-path="url(#paragraphpopup-clip)" />
+          <rect id="toolbarmenu-bodytext" x="9" y="9" width="92" height="24" />
+          <rect id="toolbarmenu-paragraph" x="9" y="33" width="92" height="24" />
+          <rect id="toolbarmenu-h1" x="9" y="57" width="92" height="24" />
+          <rect id="toolbarmenu-h2" x="9" y="81" width="92" height="24" />
+          <rect id="toolbarmenu-h3" x="9" y="105" width="92" height="24" />
+          <rect id="toolbarmenu-h4" x="9" y="129" width="92" height="24" />
+          <rect id="toolbarmenu-h5" x="9" y="153" width="92" height="24" />
+          <rect id="toolbarmenu-h6" x="9" y="177" width="92" height="24" />
+          <rect id="toolbarmenu-address" x="9" y="201" width="92" height="24" />
+          <rect id="toolbarmenu-pre" x="9" y="225" width="92" height="24" />
         </g>
-        <circle cx="52" cy="226" r="12" data-popup="ParagraphPopup" />
-        <g id="FontFacePopup" class="hidden-popup">
-          <image href="images/FontFacePopup.png" x="99" y="234" width="195" height="611" clip-path="url(#FontFacePopup-clip)" />
-          <clipPath id="FontFacePopup-clip">
-            <rect x="103" y="238" rx="8" width="187" height="603" />
+        <g id="fontfacepopup" class="hidden-popup" transform="translate(99, 232)">
+          <clipPath id="fontfacepopup-clip">
+            <rect x="4" y="4" rx="8" width="259" height="565" />
           </clipPath>
-          <rect id="toolbarmenu-fontvarwidth" x="108" y="243" width="165" height="24" />
-          <rect id="toolbarmenu-fontfixedwidth" x="108" y="267" width="165" height="24" />
-          <rect id="toolbarmenu-fonthelvetica" x="108" y="300" width="165" height="24" />
-          <rect id="toolbarmenu-fonttimes" x="108" y="324" width="165" height="24" />
-          <rect id="toolbarmenu-fontcourier" x="108" y="348" width="165" height="24" />
+          <image href="images/FontFacePopup.png" x="0" y="0" width="267" height="573" clip-path="url(#fontfacepopup-clip)" />
+          <rect id="toolbarmenu-fontvarwidth" x="9" y="9" width="237" height="24" />
+          <rect id="toolbarmenu-fontfixedwidth" x="9" y="33" width="237" height="24" />
+          <rect id="toolbarmenu-fonthelvetica" x="9" y="66" width="237" height="24" />
+          <rect id="toolbarmenu-fonttimes" x="9" y="90" width="237" height="24" />
+          <rect id="toolbarmenu-fontcourier" x="9" y="114" width="237" height="24" />
         </g>
-        <circle cx="164" cy="226" r="12" data-popup="FontFacePopup" />
-        <g id="AlignPopup" class="hidden-popup">
-          <image href="images/AlignPopup.png" x="558" y="234" width="108" height="114" clip-path="url(#AlignPopup-clip)" />
-          <clipPath id="AlignPopup-clip">
-            <rect x="562" y="238" rx="8" width="100" height="106" />
+        <g id="alignpopup" class="hidden-popup" transform="translate(556, 232)">
+          <clipPath id="alignpopup-clip">
+            <rect x="4" y="4" rx="8" width="91" height="106" />
           </clipPath>
-          <rect id="alignleftitem" x="567" y="243" width="90" height="24" />
-          <rect id="aligncenteritem" x="567" y="267" width="90" height="24" />
-          <rect id="alignrightitem" x="567" y="291" width="90" height="24" />
-          <rect id="alignjustifyitem" x="567" y="315" width="90" height="24" />
+          <image href="images/AlignPopup.png" x="0" y="0" width="99" height="114" clip-path="url(#alignpopup-clip)" />
+          <rect id="alignleftitem" x="9" y="9" width="81" height="24" />
+          <rect id="aligncenteritem" x="9" y="33" width="81" height="24" />
+          <rect id="alignrightitem" x="9" y="57" width="81" height="24" />
+          <rect id="alignjustifyitem" x="9" y="81" width="81" height="24" />
         </g>
-        <circle cx="579" cy="226" r="12" data-popup="AlignPopup" />
-        <g id="InsertPopup" class="hidden-popup">
-          <image href="images/InsertPopup.png" x="595" y="234" width="110" height="138" clip-path="url(#InsertPopup-clip)" />
-          <clipPath id="InsertPopup-clip">
-            <rect x="599" y="238" rx="8" width="102" height="130" />
+        <g id="insertpopup" class="hidden-popup" transform="translate(597, 232)">
+          <clipPath id="insertpopup-clip">
+            <rect x="4" y="4" rx="8" width="94" height="130" />
           </clipPath>
-          <rect id="insertlinkitem" x="604" y="243" width="92" height="24" />
-          <rect id="insertanchoritem" x="604" y="267" width="92" height="24" />
-          <rect id="insertimageitem" x="604" y="291" width="92" height="24" />
-          <rect id="inserthruleitem" x="604" y="315" width="92" height="24" />
-          <rect id="inserttableitem" x="604" y="339" width="92" height="24" />
+          <image href="images/InsertPopup.png" x="0" y="0" width="102" height="138" clip-path="url(#insertpopup-clip)" />
+          <rect id="insertlinkitem" x="9" y="9" width="84" height="24" />
+          <rect id="insertanchoritem" x="9" y="33" width="84" height="24" />
+          <rect id="insertimageitem" x="9" y="57" width="84" height="24" />
+          <rect id="inserthruleitem" x="9" y="81" width="84" height="24" />
+          <rect id="inserttableitem" x="9" y="105" width="84" height="24" />
         </g>
-        <circle cx="616" cy="226" r="12" data-popup="InsertPopup" />
-        <g id="smileyPopup" class="hidden-popup">
-          <image href="images/smileyPopup.png" x="632" y="234" width="154" height="402" clip-path="url(#smileyPopup-clip)" />
-          <clipPath id="smileyPopup-clip">
-            <rect x="636" y="238" rx="8" width="146" height="394" />
+        <g id="smileypopup" class="hidden-popup" transform="translate(638, 232)">
+          <clipPath id="smileypopup-clip">
+            <rect x="4" y="4" rx="8" width="138" height="394" />
           </clipPath>
-          <rect id="smileysmile" x="641" y="243" width="136" height="24" />
-          <rect id="smileyfrown" x="641" y="267" width="136" height="24" />
-          <rect id="smileywink" x="641" y="291" width="136" height="24" />
-          <rect id="smileytongue" x="641" y="315" width="136" height="24" />
-          <rect id="smileylaughing" x="641" y="339" width="136" height="24" />
-          <rect id="smileyembarassed" x="641" y="363" width="136" height="24" />
-          <rect id="smileyundecided" x="641" y="387" width="136" height="24" />
-          <rect id="smileysurprise" x="641" y="411" width="136" height="24" />
-          <rect id="smileykiss" x="641" y="435" width="136" height="24" />
-          <rect id="smileyyell" x="641" y="459" width="136" height="24" />
-          <rect id="smileycool" x="641" y="483" width="136" height="24" />
-          <rect id="smileymoney" x="641" y="507" width="136" height="24" />
-          <rect id="smileyfoot" x="641" y="531" width="136" height="24" />
-          <rect id="smileyinnocent" x="641" y="555" width="136" height="24" />
-          <rect id="smileycry" x="641" y="579" width="136" height="24" />
-          <rect id="smileysealed" x="641" y="603" width="136" height="24" />
+          <image href="images/smileyPopup.png" x="0" y="0" width="146" height="402" clip-path="url(#smileypopup-clip)" />
+          <rect id="smileysmile" x="9" y="9" width="128" height="24" />
+          <rect id="smileyfrown" x="9" y="33" width="128" height="24" />
+          <rect id="smileywink" x="9" y="57" width="128" height="24" />
+          <rect id="smileytongue" x="9" y="81" width="128" height="24" />
+          <rect id="smileylaughing" x="9" y="105" width="128" height="24" />
+          <rect id="smileyembarassed" x="9" y="129" width="128" height="24" />
+          <rect id="smileyundecided" x="9" y="153" width="128" height="24" />
+          <rect id="smileysurprise" x="9" y="177" width="128" height="24" />
+          <rect id="smileykiss" x="9" y="201" width="128" height="24" />
+          <rect id="smileycool" x="9" y="225" width="128" height="24" />
+          <rect id="smileymoney" x="9" y="249" width="128" height="24" />
+          <rect id="smileyfoot" x="9" y="273" width="128" height="24" />
+          <rect id="smileyinnocent" x="9" y="297" width="128" height="24" />
+          <rect id="smileycry" x="9" y="321" width="128" height="24" />
+          <rect id="smileysealed" x="9" y="345" width="128" height="24" />
+          <rect id="smileyangry" x="9" y="369" width="128" height="24" />
         </g>
-        <circle cx="653" cy="226" r="12" data-popup="smileyPopup" />
-        <g id="msgComposeAttachmentItemContext" class="hidden-popup">
-          <image href="images/msgComposeAttachmentItemContext.png" x="90" y="562" width="213" height="204" clip-path="url(#msgComposeAttachmentItemContext-clip)" />
-          <clipPath id="msgComposeAttachmentItemContext-clip">
-            <rect x="94" y="566" rx="8" width="205" height="196" />
-          </clipPath>
-          <rect id="composeattachmentcontext-openitem" x="99" y="571" width="195" height="24" />
-          <rect id="composeattachmentcontext-renameitem" x="99" y="595" width="195" height="24" />
-          <rect id="composeattachmentcontext-reorderitem" x="99" y="619" width="195" height="24" />
-          <rect id="composeattachmentcontext-deleteitem" x="99" y="652" width="195" height="24" />
-          <rect id="composeattachmentcontext-convertcloudmenu" x="99" y="676" width="195" height="24" />
-          <rect id="composeattachmentcontext-canceluploaditem" x="99" y="700" width="195" height="24" />
-          <rect id="composeattachmentcontext-selectallitem" x="99" y="733" width="195" height="24" />
-        </g>
-        <circle cx="92" cy="763" r="12" data-popup="msgComposeAttachmentItemContext" />
-        <g id="msgComposeAttachmentListContext" class="hidden-popup">
-          <image href="images/msgComposeAttachmentListContext.png" x="638" y="577" width="237" height="189" clip-path="url(#msgComposeAttachmentListContext-clip)" />
-          <clipPath id="msgComposeAttachmentListContext-clip">
-            <rect x="642" y="581" rx="8" width="229" height="181" />
-          </clipPath>
-          <rect id="attachmentlistcontext-selectallitem" x="647" y="586" width="219" height="24" />
-          <rect id="attachmentlistcontext-attachfileitem" x="647" y="619" width="219" height="24" />
-          <rect id="attachmentlistcontext-attachpageitem" x="647" y="643" width="219" height="24" />
-          <rect id="attachmentlistcontext-remindlateritem" x="647" y="676" width="219" height="24" />
-          <rect id="attachmentlistcontext-reorderitem" x="647" y="700" width="219" height="24" />
-          <rect id="attachmentlistcontext-removeallitem" x="647" y="733" width="219" height="24" />
-        </g>
-        <circle cx="640" cy="763" r="12" data-popup="msgComposeAttachmentListContext" />
       </svg>
     </section>
     <section>
@@ -346,144 +394,141 @@
         <h2>Address Book</h2><button type="button" class="current" onclick="switchMode(this, 'addressbook-display');">Display</button><button type="button" onclick="switchMode(this, 'addressbook-edit');">Edit</button>
       </header>
       <svg xmlns="http://www.w3.org/2000/svg" id="addressbook-display" width="1280" height="800">
-        <g>
+        <g id="" transform="translate(0, 0)">
           <image href="images/addressBook.png" x="0" y="0" width="1280" height="800" />
           <rect id="mailbutton" x="7" y="7" width="30" height="30" />
           <rect id="addressbookbutton" x="7" y="52" width="30" height="30" />
           <rect id="calendarbutton" x="7" y="97" width="30" height="30" />
           <rect id="tasksbutton" x="7" y="142" width="30" height="30" />
           <rect id="chatbutton" x="7" y="187" width="30" height="30" />
-          <rect id="settingsbutton" x="7" y="718" width="30" height="30" />
+          <rect id="settingsbutton" x="7" y="718" width="30" height="30" class="clickable" onclick="togglePopup('settingscontextmenu');" />
           <rect id="collapsebutton" x="7" y="763" width="30" height="30" />
-          <rect id="button-appmenu" x="1163" y="6" width="35" height="30" />
-          <rect id="messenger-window-minimize-button" x="1202" y="11" width="23" height="20" />
-          <rect id="messenger-window-maximize-button" x="1225" y="11" width="26" height="20" />
-          <rect id="messenger-window-close-button" x="1251" y="11" width="23" height="20" />
+          <rect id="button-appmenu" x="1127" y="6" width="35" height="30" />
+          <rect id="messenger-window-minimize-button" x="1166" y="0" width="37" height="42" />
+          <rect id="messenger-window-maximize-button" x="1203" y="0" width="37" height="42" />
+          <rect id="messenger-window-close-button" x="1240" y="0" width="41" height="42" />
           <rect id="tab-close-button" x="522" y="53" width="20" height="20" />
-          <rect id="offline-status" x="49" y="779" width="20" height="22" />
-          <rect id="toolbarcreatebook" x="46" y="83" width="169" height="24" />
-          <rect id="toolbarcreatecontact" x="217" y="83" width="110" height="24" />
-          <rect id="toolbarcreatelist" x="329" y="83" width="84" height="24" />
-          <rect id="toolbarimport" x="415" y="83" width="73" height="24" />
-          <rect id="searchinput" x="292" y="145" width="290" height="32" />
-          <rect id="displaybutton" x="588" y="145" width="32" height="32" />
-          <rect id="detailswritebutton" x="664" y="265" width="86" height="32" />
-          <rect id="detailseventbutton" x="756" y="265" width="87" height="32" />
-          <rect id="detailssearchbutton" x="849" y="265" width="94" height="32" />
-          <rect id="editbutton" x="1151" y="265" width="92" height="32" />
+          <rect id="today-closer" x="1280" y="79" width="4" height="4" />
+          <rect id="calendar-today-button-tooltip" x="1284" y="83" width="2" height="30" />
+          <rect id="calendar-nav-button-prev-tooltip-month" x="1290" y="83" width="2" height="30" />
+          <rect id="calendar-nav-button-next-tooltip-month" x="1290" y="83" width="2" height="30" />
+          <rect id="calendar-nav-button-prev-tooltip-year" x="1296" y="83" width="2" height="30" />
+          <rect id="calendar-nav-button-next-tooltip-year" x="1296" y="83" width="2" height="30" />
+          <rect id="previous-day-button" x="1280" y="79" width="8" height="8" />
+          <rect id="today-button" x="1280" y="79" width="8" height="8" />
+          <rect id="next-day-button" x="1280" y="79" width="8" height="8" />
+          <rect id="miniday-dropdown-button" x="1280" y="79" width="8" height="8" />
+          <rect id="todaypane-new-event-button" x="1281" y="83" width="8" height="8" />
+          <rect id="unifinder-task-edit-field" x="1280" y="80" width="12" height="30" />
+          <rect id="offline-status" x="49" y="779" width="20" height="21" />
+          <rect id="calendar-status-todaypane-button" x="1284" y="779" width="6" height="3" />
+          <rect id="bookspanecreatebook" x="54" y="88" width="30" height="30" />
+          <rect id="bookspanecreatecontact" x="105" y="89" width="119" height="29" />
+          <rect id="bookspanecreatelist" x="246" y="88" width="30" height="30" />
+          <rect id="bookspaneimport" x="192" y="693" width="87" height="31" />
+          <rect id="displaybutton" x="587" y="88" width="30" height="30" class="clickable" onclick="togglePopup('sortcontext');" />
+          <rect id="detailswritebutton" x="670" y="217" width="81" height="32" />
+          <rect id="detailseventbutton" x="763" y="217" width="82" height="32" />
+          <rect id="detailssearchbutton" x="856" y="217" width="89" height="32" />
+          <rect id="editbutton" x="1151" y="217" width="92" height="32" />
+          <rect id="bookrow-menu" x="256" y="172" width="22" height="22" class="clickable" onclick="togglePopup('bookcontext');" />
+          <rect id="cards-row0" x="286" y="128" width="340" height="52" class="clickable" onclick="togglePopup('cardcontext');" />
+          <circle cx="267" cy="183" r="12" data-popup="bookcontext" />
+          <circle cx="456" cy="154" r="12" data-popup="cardcontext" />
+          <circle cx="602" cy="103" r="12" data-popup="sortcontext" />
         </g>
-        <g id="toolbarCreateBookPopup" class="hidden-popup">
-          <image href="images/toolbarCreateBookPopup.png" x="42" y="103" width="237" height="90" clip-path="url(#toolbarCreateBookPopup-clip)" />
-          <clipPath id="toolbarCreateBookPopup-clip">
-            <rect x="46" y="107" rx="8" width="229" height="82" />
+        <g id="bookcontext" class="hidden-popup" transform="translate(249, 195)">
+          <clipPath id="bookcontext-clip">
+            <rect x="4" y="4" rx="8" width="200" height="139" />
           </clipPath>
-          <rect id="about-addressbook-toolbar-new-address-book" x="51" y="112" width="219" height="24" />
-          <rect id="about-addressbook-toolbar-add-carddav-address-book" x="51" y="136" width="219" height="24" />
-          <rect id="about-addressbook-toolbar-add-ldap-address-book" x="51" y="160" width="219" height="24" />
+          <image href="images/bookContext.png" x="0" y="0" width="208" height="147" clip-path="url(#bookcontext-clip)" />
+          <rect id="bookcontextproperties" x="9" y="9" width="190" height="24" />
+          <rect id="bookcontextprint" x="9" y="33" width="190" height="24" />
+          <rect id="bookcontextexport" x="9" y="57" width="190" height="24" />
+          <rect id="bookcontextdelete" x="9" y="81" width="190" height="24" />
+          <rect id="bookcontextstartupdefault" x="9" y="114" width="190" height="24" />
         </g>
-        <circle cx="203" cy="95" r="12" data-popup="toolbarCreateBookPopup" />
-        <g id="bookContext" class="hidden-popup">
-          <image href="images/bookContext.png" x="249" y="205" width="218" height="147" clip-path="url(#bookContext-clip)" />
-          <clipPath id="bookContext-clip">
-            <rect x="253" y="209" rx="8" width="210" height="139" />
+        <g id="cardcontext" class="hidden-popup" transform="translate(454, 152)">
+          <clipPath id="cardcontext-clip">
+            <rect x="4" y="4" rx="8" width="82" height="115" />
           </clipPath>
-          <rect id="bookcontextproperties" x="258" y="214" width="200" height="24" />
-          <rect id="bookcontextprint" x="258" y="238" width="200" height="24" />
-          <rect id="bookcontextexport" x="258" y="262" width="200" height="24" />
-          <rect id="bookcontextdelete" x="258" y="286" width="200" height="24" />
-          <rect id="bookcontextstartupdefault" x="258" y="319" width="200" height="24" />
+          <image href="images/cardContext.png" x="0" y="0" width="90" height="123" clip-path="url(#cardcontext-clip)" />
+          <rect id="cardcontextwrite" x="9" y="9" width="72" height="24" />
+          <rect id="cardcontextedit" x="9" y="42" width="72" height="24" />
+          <rect id="cardcontextprint" x="9" y="66" width="72" height="24" />
+          <rect id="cardcontextdelete" x="9" y="90" width="72" height="24" />
         </g>
-        <circle cx="268" cy="192" r="12" data-popup="bookContext" />
-        <g id="cardContext" class="hidden-popup">
-          <image href="images/cardContext.png" x="448" y="208" width="112" height="123" clip-path="url(#cardContext-clip)" />
-          <clipPath id="cardContext-clip">
-            <rect x="452" y="212" rx="8" width="104" height="115" />
+        <g id="sortcontext" class="hidden-popup" transform="translate(583, 114)">
+          <clipPath id="sortcontext-clip">
+            <rect x="4" y="4" rx="8" width="219" height="220" />
           </clipPath>
-          <rect id="cardcontextwrite" x="457" y="217" width="94" height="24" />
-          <rect id="cardcontextedit" x="457" y="250" width="94" height="24" />
-          <rect id="cardcontextprint" x="457" y="274" width="94" height="24" />
-          <rect id="cardcontextdelete" x="457" y="298" width="94" height="24" />
+          <image href="images/sortContext.png" x="0" y="0" width="227" height="228" clip-path="url(#sortcontext-clip)" />
+          <rect id="about-addressbook-name-format-display" x="9" y="9" width="209" height="24" />
+          <rect id="about-addressbook-name-format-firstlast" x="9" y="33" width="209" height="24" />
+          <rect id="about-addressbook-name-format-lastfirst" x="9" y="57" width="209" height="24" />
+          <rect id="about-addressbook-sort-name-ascending" x="9" y="90" width="209" height="24" />
+          <rect id="about-addressbook-sort-name-descending" x="9" y="114" width="209" height="24" />
+          <rect id="about-addressbook-sort-email-ascending" x="9" y="138" width="209" height="24" />
+          <rect id="about-addressbook-sort-email-descending" x="9" y="162" width="209" height="24" />
+          <rect id="sortcontexttablelayout" x="9" y="195" width="209" height="24" />
         </g>
-        <circle cx="450" cy="209" r="12" data-popup="cardContext" />
-        <g id="sortContext" class="hidden-popup">
-          <image href="images/sortContext.png" x="584" y="174" width="238" height="228" clip-path="url(#sortContext-clip)" />
-          <clipPath id="sortContext-clip">
-            <rect x="588" y="178" rx="8" width="230" height="220" />
-          </clipPath>
-          <rect id="about-addressbook-name-format-display" x="593" y="183" width="220" height="24" />
-          <rect id="about-addressbook-name-format-firstlast" x="593" y="207" width="220" height="24" />
-          <rect id="about-addressbook-name-format-lastfirst" x="593" y="231" width="220" height="24" />
-          <rect id="about-addressbook-sort-name-ascending" x="593" y="264" width="220" height="24" />
-          <rect id="about-addressbook-sort-name-descending" x="593" y="288" width="220" height="24" />
-          <rect id="about-addressbook-sort-email-ascending" x="593" y="312" width="220" height="24" />
-          <rect id="about-addressbook-sort-email-descending" x="593" y="336" width="220" height="24" />
-          <rect id="sortcontexttablelayout" x="593" y="369" width="220" height="24" />
-        </g>
-        <circle cx="604" cy="161" r="12" data-popup="sortContext" />
       </svg>
-      <svg xmlns="http://www.w3.org/2000/svg" id="addressbook-edit" class="hidden" width="1280" height="800" viewBox="0 0 981 1416">
-        <image href="images/addressBook2.png" x="0" y="0" width="981" height="1416" />
-        <g id="" transform="translate(-71, -138)">
-          <rect id="photobutton" x="92" y="159" width="100" height="100" />
-          <rect id="vcard-n-add-prefix" x="92" y="306" width="15" height="15" />
-          <rect id="vcard-n-firstname" x="113" y="297" width="435" height="30" />
-          <rect id="vcard-n-add-middlename" x="554" y="306" width="15" height="15" />
-          <rect id="vcard-n-lastname" x="575" y="297" width="435" height="30" />
-          <rect id="vcard-n-add-suffix" x="1016" y="306" width="15" height="15" />
-          <rect id="vcarddisplayname" x="92" y="365" width="452" height="32" />
-          <rect id="vcardpreferdisplayname" x="92" y="409" width="16" height="16" />
-          <rect id="vcardnickname" x="576" y="365" width="452" height="32" />
-          <rect id="vcard-type-selection-email" x="92" y="499" width="70" height="32" />
-          <rect id="vcard-email-address" x="165" y="498" width="310" height="32" />
-          <rect id="vcard-email-default" x="496" y="504" width="16" height="16" />
-          <rect id="vcard-remove-email" x="531" y="506" width="16" height="16" />
-          <rect id="vcard-add-email" x="92" y="533" width="137" height="22" />
-          <rect id="vcard-type-selection-url" x="576" y="480" width="70" height="32" />
-          <rect id="vcard-url" x="649" y="480" width="361" height="32" />
-          <rect id="vcard-remove-url" x="1013" y="487" width="18" height="18" />
-          <rect id="vcard-add-url" x="576" y="515" width="101" height="22" />
-          <rect id="vcard-type-selection-adr" x="576" y="591" width="70" height="32" />
-          <rect id="vcard-street" x="649" y="614" width="379" height="47" />
-          <rect id="vcard-locality" x="649" y="687" width="379" height="32" />
-          <rect id="vcard-region" x="649" y="745" width="379" height="32" />
-          <rect id="vcard-code" x="649" y="803" width="379" height="32" />
-          <rect id="vcard-country" x="649" y="861" width="379" height="32" />
-          <rect id="vcard-remove-adr" x="576" y="897" width="73" height="22" />
-          <rect id="vcard-add-adr" x="576" y="921" width="100" height="22" />
-          <rect id="vcard-type-selection-tel" x="92" y="608" width="70" height="32" />
-          <rect id="vcard-tel" x="165" y="608" width="361" height="32" />
-          <rect id="vcard-remove-tel" x="529" y="615" width="18" height="18" />
-          <rect id="vcard-add-tel" x="92" y="643" width="142" height="22" />
-          <rect id="vcard-remove-tz" x="92" y="754" width="73" height="22" />
-          <rect id="vcard-add-tz" x="267" y="723" width="113" height="22" />
-          <rect id="vcard-type-selection-impp" x="92" y="832" width="73" height="32" />
-          <rect id="vcard-impp" x="168" y="832" width="357" height="32" />
-          <rect id="vcard-remove-impp" x="529" y="839" width="18" height="18" />
-          <rect id="vcard-add-impp" x="92" y="867" width="130" height="22" />
-          <rect id="vcard-type-selection-bday-anniversary" x="92" y="942" width="109" height="32" />
-          <rect id="vcard-year" x="204" y="942" width="96" height="32" />
-          <rect id="vcard-month" x="300" y="942" width="103" height="32" />
-          <rect id="vcard-day" x="403" y="942" width="55" height="32" />
-          <rect id="vcard-remove-bday-anniversary" x="461" y="949" width="18" height="18" />
-          <rect id="vcard-add-bday-anniversary" x="92" y="980" width="126" height="22" />
-          <rect id="vcard-remove-note" x="576" y="1115" width="73" height="22" />
-          <rect id="vcard-add-note" x="652" y="1114" width="81" height="22" />
-          <rect id="vcard-title" x="92" y="1079" width="452" height="32" />
-          <rect id="vcard-role" x="92" y="1137" width="452" height="32" />
-          <rect id="vcard-org" x="92" y="1195" width="452" height="32" />
-          <rect id="vcard-orgunit" x="92" y="1230" width="452" height="32" />
-          <rect id="vcard-add-org" x="92" y="1266" width="210" height="22" />
-          <rect id="vcard-remove-org" x="305" y="1266" width="73" height="22" />
-          <rect id="vcard-custom" x="576" y="1216" width="452" height="32" />
-          <rect id="vcard-custom" x="576" y="1274" width="452" height="32" />
-          <rect id="vcard-custom" x="576" y="1332" width="452" height="32" />
-          <rect id="vcard-custom" x="576" y="1391" width="452" height="32" />
-          <rect id="vcard-remove-custom" x="576" y="1426" width="73" height="22" />
-          <rect id="vcard-add-custom" x="652" y="1426" width="165" height="22" />
-          <rect id="detailsdeletebutton" x="92" y="1497" width="94" height="32" />
-          <rect id="addcontactbooklist" x="626" y="1497" width="209" height="32" />
-          <rect id="canceleditbutton" x="840" y="1497" width="92" height="32" />
-          <rect id="saveeditbutton" x="938" y="1497" width="92" height="32" />
+      <svg xmlns="http://www.w3.org/2000/svg" id="addressbook-edit" class="hidden" width="1280" height="800" viewBox="0 0 981 1333">
+        <g id="" transform="translate(-45, -115)">
+          <image href="images/addressBook2.png" x="45" y="115" width="981" height="1333" />
+          <rect id="photobutton" x="66" y="136" width="80" height="80" />
+          <rect id="vcard-n-add-prefix" x="66" y="263" width="15" height="15" />
+          <rect id="vcard-n-firstname" x="87" y="254" width="435" height="30" />
+          <rect id="vcard-n-add-middlename" x="528" y="263" width="15" height="15" />
+          <rect id="vcard-n-lastname" x="549" y="254" width="435" height="30" />
+          <rect id="vcard-n-add-suffix" x="990" y="263" width="15" height="15" />
+          <rect id="vcarddisplayname" x="66" y="321" width="452" height="30" />
+          <rect id="vcardnickname" x="550" y="321" width="452" height="30" />
+          <rect id="vcard-type-selection-email" x="66" y="426" width="71" height="30" />
+          <rect id="vcard-email-address" x="140" y="426" width="326" height="30" />
+          <rect id="vcard-remove-email" x="468" y="433" width="16" height="16" />
+          <rect id="vcard-add-email" x="72" y="465" width="136" height="21" />
+          <rect id="vcard-type-selection-url" x="550" y="408" width="71" height="30" />
+          <rect id="vcard-url" x="624" y="408" width="362" height="30" />
+          <rect id="vcard-remove-url" x="989" y="415" width="16" height="16" />
+          <rect id="vcard-add-url" x="556" y="447" width="100" height="21" />
+          <rect id="vcard-type-selection-adr" x="550" y="528" width="71" height="30" />
+          <rect id="vcard-street" x="624" y="551" width="378" height="32" />
+          <rect id="vcard-locality" x="624" y="608" width="378" height="30" />
+          <rect id="vcard-region" x="624" y="663" width="378" height="30" />
+          <rect id="vcard-code" x="624" y="719" width="378" height="30" />
+          <rect id="vcard-country" x="624" y="775" width="378" height="30" />
+          <rect id="vcard-remove-adr" x="550" y="808" width="73" height="21" />
+          <rect id="vcard-add-adr" x="556" y="838" width="99" height="21" />
+          <rect id="vcard-type-selection-tel" x="66" y="546" width="71" height="30" />
+          <rect id="vcard-tel" x="140" y="546" width="362" height="30" />
+          <rect id="vcard-remove-tel" x="505" y="553" width="16" height="16" />
+          <rect id="vcard-add-tel" x="72" y="585" width="141" height="21" />
+          <rect id="vcard-remove-tz" x="66" y="702" width="73" height="21" />
+          <rect id="vcard-type-selection-impp" x="66" y="779" width="74" height="30" />
+          <rect id="vcard-impp" x="143" y="779" width="359" height="30" />
+          <rect id="vcard-remove-impp" x="505" y="786" width="16" height="16" />
+          <rect id="vcard-add-impp" x="72" y="819" width="130" height="21" />
+          <rect id="vcard-type-selection-bday-anniversary" x="66" y="899" width="108" height="30" />
+          <rect id="vcard-year" x="177" y="899" width="96" height="30" />
+          <rect id="vcard-month" x="274" y="899" width="103" height="30" />
+          <rect id="vcard-day" x="377" y="899" width="56" height="30" />
+          <rect id="vcard-remove-bday-anniversary" x="436" y="908" width="16" height="16" />
+          <rect id="vcard-add-bday-anniversary" x="72" y="944" width="125" height="21" />
+          <rect id="vcard-remove-note" x="550" y="1020" width="73" height="21" />
+          <rect id="vcard-title" x="66" y="1048" width="452" height="30" />
+          <rect id="vcard-role" x="66" y="1103" width="452" height="30" />
+          <rect id="vcard-org" x="66" y="1159" width="452" height="30" />
+          <rect id="vcard-orgunit" x="66" y="1192" width="452" height="30" />
+          <rect id="vcard-remove-org" x="66" y="1226" width="73" height="21" />
+          <rect id="vcard-custom" x="550" y="1120" width="452" height="30" />
+          <rect id="vcard-custom" x="550" y="1175" width="452" height="30" />
+          <rect id="vcard-custom" x="550" y="1231" width="452" height="30" />
+          <rect id="vcard-custom" x="550" y="1287" width="452" height="30" />
+          <rect id="vcard-remove-custom" x="550" y="1320" width="73" height="21" />
+          <rect id="addcontactbooklist" x="606" y="1390" width="203" height="32" />
+          <rect id="canceleditbutton" x="814" y="1390" width="92" height="32" />
+          <rect id="saveeditbutton" x="912" y="1390" width="92" height="32" />
         </g>
       </svg>
     </section>
@@ -492,121 +537,134 @@
         <h2>Calendar</h2>
       </header>
       <svg xmlns="http://www.w3.org/2000/svg" width="1280" height="800">
-        <g>
+        <g id="" transform="translate(0, 0)">
           <image href="images/calendar.png" x="0" y="0" width="1280" height="800" />
           <rect id="mailbutton" x="7" y="7" width="30" height="30" />
           <rect id="addressbookbutton" x="7" y="52" width="30" height="30" />
           <rect id="calendarbutton" x="7" y="97" width="30" height="30" />
           <rect id="tasksbutton" x="7" y="142" width="30" height="30" />
           <rect id="chatbutton" x="7" y="187" width="30" height="30" />
-          <rect id="settingsbutton" x="7" y="718" width="30" height="30" />
+          <rect id="settingsbutton" x="7" y="718" width="30" height="30" class="clickable" onclick="togglePopup('settingscontextmenu');" />
           <rect id="collapsebutton" x="7" y="763" width="30" height="30" />
-          <rect id="button-appmenu" x="1163" y="6" width="35" height="30" />
-          <rect id="messenger-window-minimize-button" x="1202" y="11" width="23" height="20" />
-          <rect id="messenger-window-maximize-button" x="1225" y="11" width="26" height="20" />
-          <rect id="messenger-window-close-button" x="1251" y="11" width="23" height="20" />
+          <rect id="button-appmenu" x="1127" y="6" width="35" height="30" />
+          <rect id="messenger-window-minimize-button" x="1166" y="0" width="37" height="42" />
+          <rect id="messenger-window-maximize-button" x="1203" y="0" width="37" height="42" />
+          <rect id="messenger-window-close-button" x="1240" y="0" width="41" height="42" />
           <rect id="tab-close-button" x="522" y="53" width="20" height="20" />
-          <rect id="sidepanelnewevent" x="146" y="85" width="107" height="30" />
-          <rect id="calendar-today-button-tooltip" x="56" y="126" width="30" height="30" />
-          <rect id="calendar-nav-button-prev-tooltip-month" x="92" y="126" width="30" height="30" />
-          <rect id="calendar-nav-button-next-tooltip-month" x="200" y="126" width="30" height="30" />
-          <rect id="calendar-nav-button-prev-tooltip-year" x="236" y="126" width="30" height="30" />
-          <rect id="calendar-nav-button-next-tooltip-year" x="313" y="126" width="30" height="30" />
-          <rect id="calendarlistheader" x="45" y="395" width="309" height="37" />
-          <rect id="calendar-enable-button" x="268" y="438" width="49" height="16" />
-          <rect id="calendar-list-item-context-button" x="323" y="438" width="16" height="16" />
-          <rect id="calendar-list-item-context-button" x="323" y="463" width="16" height="16" />
-          <rect id="calendar-list-item-context-button" x="323" y="488" width="16" height="16" />
-          <rect id="newcalendarsidebarbutton" x="51" y="737" width="139" height="30" />
-          <rect id="refreshcalendar" x="318" y="737" width="30" height="30" />
-          <rect id="unifinder-closer" x="1058" y="79" width="20" height="36" />
-          <rect id="previousviewbutton" x="361" y="221" width="30" height="30" />
-          <rect id="todayviewbutton" x="391" y="221" width="30" height="30" />
-          <rect id="nextviewbutton" x="421" y="221" width="30" height="30" />
-          <rect id="caltabday" x="708" y="224" width="55" height="24" />
-          <rect id="caltabweek" x="770" y="224" width="67" height="24" />
-          <rect id="caltabmultiweek" x="842" y="224" width="98" height="24" />
-          <rect id="caltabmonth" x="946" y="224" width="73" height="24" />
-          <rect id="calendarcontrolbarmenu" x="1038" y="221" width="30" height="30" />
-          <rect id="today-pane-cycler-prev" x="1200" y="84" width="26" height="22" />
-          <rect id="today-pane-cycler-next" x="1226" y="84" width="26" height="22" />
-          <rect id="today-closer" x="1257" y="85" width="20" height="20" />
-          <rect id="show-completed-checkbox" x="1087" y="119" width="191" height="16" />
-          <rect id="unifinder-task-edit-field" x="1083" y="740" width="194" height="32" />
-          <rect id="offline-status" x="49" y="779" width="20" height="22" />
-          <rect id="calendar-status-todaypane-button" x="1163" y="780" width="113" height="21" />
+          <rect id="sidepanelnewevent" x="146" y="88" width="106" height="29" />
+          <rect id="calendar-today-button-tooltip" x="56" y="131" width="30" height="30" />
+          <rect id="calendar-nav-button-prev-tooltip-month" x="92" y="131" width="30" height="30" />
+          <rect id="calendar-nav-button-next-tooltip-month" x="199" y="131" width="30" height="30" />
+          <rect id="calendar-nav-button-prev-tooltip-year" x="235" y="131" width="30" height="30" />
+          <rect id="calendar-nav-button-next-tooltip-year" x="312" y="131" width="30" height="30" />
+          <rect id="calendarlistheader" x="45" y="397" width="308" height="37" />
+          <rect id="calendar-enable-button" x="268" y="440" width="49" height="16" />
+          <rect id="calendar-list-item-context-button" x="322" y="440" width="16" height="16" class="clickable" onclick="togglePopup('list-calendars-context-menu');" />
+          <rect id="hide-calendar-title" x="300" y="465" width="16" height="16" />
+          <rect id="calendar-list-item-context-button" x="322" y="465" width="16" height="16" class="clickable" onclick="togglePopup('list-calendars-context-menu');" />
+          <rect id="show-calendar-title" x="300" y="490" width="16" height="16" />
+          <rect id="calendar-list-item-context-button" x="322" y="490" width="16" height="16" class="clickable" onclick="togglePopup('list-calendars-context-menu');" />
+          <rect id="newcalendarsidebarbutton" x="51" y="737" width="138" height="30" />
+          <rect id="refreshcalendar" x="317" y="737" width="30" height="30" />
+          <rect id="event-filter-menulist" x="356" y="84" width="183" height="24" class="clickable" onclick="togglePopup('event-filter-menupopup');" />
+          <rect id="unifinder-closer" x="1058" y="79" width="20" height="34" />
+          <rect id="previousviewbutton" x="360" y="193" width="30" height="30" />
+          <rect id="todayviewbutton" x="390" y="193" width="30" height="30" />
+          <rect id="nextviewbutton" x="420" y="193" width="30" height="30" />
+          <rect id="caltabday" x="710" y="197" width="55" height="23" />
+          <rect id="caltabweek" x="772" y="197" width="66" height="23" />
+          <rect id="caltabmultiweek" x="844" y="197" width="96" height="23" />
+          <rect id="caltabmonth" x="947" y="197" width="72" height="23" />
+          <rect id="calendarcontrolbarmenu" x="1038" y="193" width="30" height="30" class="clickable" onclick="togglePopup('calcontrolbarmenupopup');" />
+          <rect id="today-pane-cycler-prev" x="1200" y="85" width="26" height="22" />
+          <rect id="today-pane-cycler-next" x="1226" y="85" width="26" height="22" />
+          <rect id="today-closer" x="1257" y="86" width="20" height="20" />
+          <rect id="show-completed-checkbox" x="1087" y="121" width="191" height="16" />
+          <rect id="unifinder-task-edit-field" x="1083" y="742" width="194" height="30" />
+          <rect id="offline-status" x="49" y="779" width="20" height="21" />
+          <rect id="calendar-status-todaypane-button" x="1164" y="780" width="112" height="20" />
+          <rect id="calendar-list-item-context-button" x="322" y="490" width="16" height="16" class="clickable" onclick="togglePopup('list-calendars-context-menu');" />
+          <rect id="calendar-enable-button" x="268" y="440" width="49" height="16" />
+          <rect id="calendar-nav-button-next-tooltip-month" x="199" y="131" width="30" height="30" />
+          <rect id="calendar-listitem-" x="300" y="490" width="16" height="16" />
+          <rect id="calendar-nav-button-prev-tooltip-month" x="92" y="131" width="30" height="30" />
+          <rect id="calendar-today-button-tooltip" x="56" y="131" width="30" height="30" />
+          <rect id="calendar-nav-button-next-tooltip-year" x="312" y="131" width="30" height="30" />
+          <rect id="calendar-nav-button-prev-tooltip-year" x="235" y="131" width="30" height="30" />
+          <circle cx="330.26666259765625" cy="497.5" r="12" data-popup="list-calendars-context-menu" />
+          <circle cx="1053" cy="208" r="12" data-popup="calcontrolbarmenupopup" />
+          <circle cx="447.74166107177734" cy="96" r="12" data-popup="event-filter-menupopup" />
+          <circle cx="801.2666015625" cy="499.67501068115234" r="12" data-popup="calendar-item-context-menu" />
+          <circle cx="587.2666625976562" cy="499.66668701171875" r="12" data-popup="calendar-view-context-menu" />
         </g>
-        <g id="list-calendars-context-menu" class="hidden-popup">
-          <image href="images/list-calendars-context-menu.png" x="319" y="500" width="213" height="237" clip-path="url(#list-calendars-context-menu-clip)" />
+        <g id="list-calendars-context-menu" class="hidden-popup" transform="translate(319, 502)">
           <clipPath id="list-calendars-context-menu-clip">
-            <rect x="323" y="504" rx="8" width="205" height="229" />
+            <rect x="4" y="4" rx="8" width="170" height="229" />
           </clipPath>
-          <rect id="list-calendars-context-togglevisible" x="328" y="509" width="195" height="24" />
-          <rect id="list-calendars-context-showonly" x="328" y="533" width="195" height="24" />
-          <rect id="list-calendars-context-showall" x="328" y="557" width="195" height="24" />
-          <rect id="list-calendars-context-new" x="328" y="590" width="195" height="24" />
-          <rect id="list-calendars-context-delete" x="328" y="614" width="195" height="24" />
-          <rect id="list-calendars-context-export" x="328" y="647" width="195" height="24" />
-          <rect id="list-calendars-context-publish" x="328" y="671" width="195" height="24" />
-          <rect id="list-calendars-context-edit" x="328" y="704" width="195" height="24" />
+          <image href="images/list-calendars-context-menu.png" x="0" y="0" width="178" height="237" clip-path="url(#list-calendars-context-menu-clip)" />
+          <rect id="list-calendars-context-togglevisible" x="9" y="9" width="160" height="24" />
+          <rect id="list-calendars-context-showonly" x="9" y="33" width="160" height="24" />
+          <rect id="list-calendars-context-showall" x="9" y="57" width="160" height="24" />
+          <rect id="list-calendars-context-new" x="9" y="90" width="160" height="24" />
+          <rect id="list-calendars-context-delete" x="9" y="114" width="160" height="24" />
+          <rect id="list-calendars-context-export" x="9" y="147" width="160" height="24" />
+          <rect id="list-calendars-context-publish" x="9" y="171" width="160" height="24" />
+          <rect id="list-calendars-context-edit" x="9" y="204" width="160" height="24" />
         </g>
-        <circle cx="331" cy="496" r="12" data-popup="list-calendars-context-menu" />
-        <g id="calControlBarMenuPopup" class="hidden-popup">
-          <image href="images/calControlBarMenuPopup.png" x="1034" y="247" width="205" height="132" clip-path="url(#calControlBarMenuPopup-clip)" />
-          <clipPath id="calControlBarMenuPopup-clip">
-            <rect x="1038" y="251" rx="8" width="197" height="124" />
+        <g id="calcontrolbarmenupopup" class="hidden-popup" transform="translate(879, 219)">
+          <clipPath id="calcontrolbarmenupopup-clip">
+            <rect x="4" y="4" rx="8" width="185" height="124" />
           </clipPath>
-          <rect id="findeventsbutton" x="1043" y="256" width="187" height="24" />
-          <rect id="hideweekendsbutton" x="1043" y="289" width="187" height="24" />
-          <rect id="defineworkweekbutton" x="1043" y="313" width="187" height="24" />
-          <rect id="showtasksincalendarbutton" x="1043" y="346" width="187" height="24" />
+          <image href="images/calControlBarMenuPopup.png" x="0" y="0" width="193" height="132" clip-path="url(#calcontrolbarmenupopup-clip)" />
+          <rect id="findeventsbutton" x="9" y="9" width="175" height="24" />
+          <rect id="hideweekendsbutton" x="9" y="42" width="175" height="24" />
+          <rect id="defineworkweekbutton" x="9" y="66" width="175" height="24" />
+          <rect id="showtasksincalendarbutton" x="9" y="99" width="175" height="24" />
         </g>
-        <circle cx="1053" cy="236" r="12" data-popup="calControlBarMenuPopup" />
-        <g id="event-filter-menupopup" class="hidden-popup">
-          <image href="images/event-filter-menupopup.png" x="353" y="105" width="228" height="234" clip-path="url(#event-filter-menupopup-clip)" />
+        <g id="event-filter-menupopup" class="hidden-popup" transform="translate(353, 104)">
           <clipPath id="event-filter-menupopup-clip">
-            <rect x="357" y="109" rx="8" width="220" height="226" />
+            <rect x="4" y="4" rx="8" width="218" height="298" />
           </clipPath>
-          <rect id="event-filter-all" x="362" y="114" width="210" height="24" />
-          <rect id="event-filter-today" x="362" y="138" width="210" height="24" />
-          <rect id="event-filter-next7days" x="362" y="162" width="210" height="24" />
-          <rect id="event-filter-next14days" x="362" y="186" width="210" height="24" />
-          <rect id="event-filter-next31days" x="362" y="210" width="210" height="24" />
-          <rect id="event-filter-thiscalendarmonth" x="362" y="234" width="210" height="24" />
-          <rect id="event-filter-future" x="362" y="258" width="210" height="24" />
-          <rect id="event-filter-current" x="362" y="282" width="210" height="24" />
-          <rect id="event-filter-currentview" x="362" y="306" width="210" height="24" />
+          <image href="images/event-filter-menupopup.png" x="0" y="0" width="226" height="306" clip-path="url(#event-filter-menupopup-clip)" />
+          <rect id="event-filter-past" x="9" y="9" width="208" height="24" />
+          <rect id="event-filter-today" x="9" y="33" width="208" height="24" />
+          <rect id="event-filter-next7days" x="9" y="57" width="208" height="24" />
+          <rect id="event-filter-next14days" x="9" y="81" width="208" height="24" />
+          <rect id="event-filter-next31days" x="9" y="105" width="208" height="24" />
+          <rect id="event-filter-next6months" x="9" y="129" width="208" height="24" />
+          <rect id="event-filter-next12months" x="9" y="153" width="208" height="24" />
+          <rect id="event-filter-future" x="9" y="177" width="208" height="24" />
+          <rect id="event-filter-thiscalendarmonth" x="9" y="201" width="208" height="24" />
+          <rect id="event-filter-current" x="9" y="225" width="208" height="24" />
+          <rect id="event-filter-currentview" x="9" y="249" width="208" height="24" />
+          <rect id="event-filter-all" x="9" y="273" width="208" height="24" />
         </g>
-        <circle cx="449" cy="97" r="12" data-popup="event-filter-menupopup" />
-        <g id="calendar-item-context-menu" class="hidden-popup">
-          <image href="images/calendar-item-context-menu.png" x="801" y="514" width="181" height="261" clip-path="url(#calendar-item-context-menu-clip)" />
+        <g id="calendar-item-context-menu" class="hidden-popup" transform="translate(800, 498)">
           <clipPath id="calendar-item-context-menu-clip">
-            <rect x="805" y="518" rx="8" width="173" height="253" />
+            <rect x="4" y="4" rx="8" width="145" height="253" />
           </clipPath>
-          <rect id="calendar-item-context-menu-view-menuitem" x="810" y="523" width="163" height="24" />
-          <rect id="calendar-item-context-menu-modify-menuitem" x="810" y="547" width="163" height="24" />
-          <rect id="calendar-item-context-menu-newevent-menutitem" x="810" y="571" width="163" height="24" />
-          <rect id="calendar-item-context-menu-newtodo-menuitem" x="810" y="595" width="163" height="24" />
-          <rect id="calendar-item-context-menu-cut-menuitem" x="810" y="628" width="163" height="24" />
-          <rect id="calendar-item-context-menu-copy-menuitem" x="810" y="652" width="163" height="24" />
-          <rect id="calendar-item-context-menu-paste-menuitem" x="810" y="676" width="163" height="24" />
-          <rect id="calendar-item-context-menu-delete-menuitem" x="810" y="742" width="163" height="24" />
+          <image href="images/calendar-item-context-menu.png" x="0" y="0" width="153" height="261" clip-path="url(#calendar-item-context-menu-clip)" />
+          <rect id="calendar-item-context-menu-view-menuitem" x="9" y="9" width="135" height="24" />
+          <rect id="calendar-item-context-menu-modify-menuitem" x="9" y="33" width="135" height="24" />
+          <rect id="calendar-item-context-menu-newevent-menutitem" x="9" y="57" width="135" height="24" />
+          <rect id="calendar-item-context-menu-newtodo-menuitem" x="9" y="81" width="135" height="24" />
+          <rect id="calendar-item-context-menu-cut-menuitem" x="9" y="114" width="135" height="24" />
+          <rect id="calendar-item-context-menu-copy-menuitem" x="9" y="138" width="135" height="24" />
+          <rect id="calendar-item-context-menu-paste-menuitem" x="9" y="162" width="135" height="24" />
+          <rect id="calendar-item-context-menu-delete-menuitem" x="9" y="228" width="135" height="24" />
         </g>
-        <circle cx="802" cy="516" r="12" data-popup="calendar-item-context-menu" />
-        <g id="calendar-view-context-menu" class="hidden-popup">
-          <image href="images/calendar-view-context-menu.png" x="586" y="514" width="181" height="195" clip-path="url(#calendar-view-context-menu-clip)" />
+        <g id="calendar-view-context-menu" class="hidden-popup" transform="translate(586, 498)">
           <clipPath id="calendar-view-context-menu-clip">
-            <rect x="590" y="518" rx="8" width="173" height="187" />
+            <rect x="4" y="4" rx="8" width="145" height="187" />
           </clipPath>
-          <rect id="calendar-view-context-menu-newevent" x="595" y="523" width="163" height="24" />
-          <rect id="calendar-view-context-menu-newtodo" x="595" y="547" width="163" height="24" />
-          <rect id="calendar-view-context-menu-previous" x="595" y="571" width="163" height="24" />
-          <rect id="calendar-view-context-menu-next" x="595" y="595" width="163" height="24" />
-          <rect id="calendar-view-context-menu-cut-menuitem" x="595" y="628" width="163" height="24" />
-          <rect id="calendar-view-context-menu-copy-menuitem" x="595" y="652" width="163" height="24" />
-          <rect id="calendar-view-context-menu-paste-menuitem" x="595" y="676" width="163" height="24" />
+          <image href="images/calendar-view-context-menu.png" x="0" y="0" width="153" height="195" clip-path="url(#calendar-view-context-menu-clip)" />
+          <rect id="calendar-view-context-menu-newevent" x="9" y="9" width="135" height="24" />
+          <rect id="calendar-view-context-menu-newtodo" x="9" y="33" width="135" height="24" />
+          <rect id="calendar-view-context-menu-previous" x="9" y="57" width="135" height="24" />
+          <rect id="calendar-view-context-menu-next" x="9" y="81" width="135" height="24" />
+          <rect id="calendar-view-context-menu-copy-menuitem" x="9" y="138" width="135" height="24" />
+          <rect id="calendar-view-context-menu-paste-menuitem" x="9" y="162" width="135" height="24" />
         </g>
-        <circle cx="588" cy="516" r="12" data-popup="calendar-view-context-menu" />
       </svg>
     </section>
     <section>
@@ -616,53 +674,52 @@
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2156 1013" width="1280" height="800">
         <g id="appmenu-mainview" transform="translate(0, 0)">
           <clipPath id="appmenu-mainview-clip">
-            <rect x="4" y="4" rx="8" width="300" height="399" />
+            <rect x="4" y="4" rx="8" width="300" height="396" />
           </clipPath>
-          <image href="images/appMenu-mainView.png" x="0" y="0" width="308" height="407" clip-path="url(#appmenu-mainview-clip)" />
+          <image href="images/appMenu-mainView.png" x="0" y="0" width="308" height="404" clip-path="url(#appmenu-mainview-clip)" />
           <rect id="appmenu-new" x="13" y="13" width="282" height="28" />
           <rect id="appmenu-create" x="13" y="41" width="282" height="28" />
           <rect id="appmenu-open" x="13" y="78" width="282" height="28" />
-          <rect id="appmenu-view" x="13" y="115" width="282" height="28" />
-          <rect id="appmenu-uidensitycompact" x="189" y="144" width="33" height="26" />
-          <rect id="appmenu-uidensitynormal" x="222" y="144" width="34" height="26" />
-          <rect id="appmenu-uidensitytouch" x="256" y="144" width="33" height="26" />
-          <rect id="appmenu-fontsizereduce-button" x="185" y="171" width="26" height="27" />
-          <rect id="appmenu-fontsizereset-button" x="213" y="171" width="53" height="28" />
-          <rect id="appmenu-fontsizeenlarge-button" x="268" y="171" width="21" height="27" />
-          <rect id="appmenu-preferences" x="13" y="208" width="282" height="28" />
-          <rect id="appmenu-accountmgr" x="13" y="236" width="282" height="28" />
-          <rect id="appmenu-addons" x="13" y="264" width="282" height="28" />
-          <rect id="appmenu-toolsmenu" x="13" y="301" width="282" height="28" />
-          <rect id="appmenu-help" x="13" y="329" width="282" height="28" />
-          <rect id="appmenu-quit" x="13" y="366" width="282" height="28" />
+          <rect id="appmenu-view" x="13" y="114" width="282" height="28" />
+          <rect id="appmenu-uidensitycompact" x="189" y="143" width="33" height="26" />
+          <rect id="appmenu-uidensitynormal" x="222" y="143" width="34" height="26" />
+          <rect id="appmenu-uidensitytouch" x="256" y="143" width="33" height="26" />
+          <rect id="appmenu-fontsizereduce-button" x="185" y="170" width="26" height="27" />
+          <rect id="appmenu-fontsizereset-button" x="213" y="170" width="53" height="27" />
+          <rect id="appmenu-fontsizeenlarge-button" x="268" y="170" width="21" height="27" />
+          <rect id="appmenu-preferences" x="13" y="206" width="282" height="28" />
+          <rect id="appmenu-accountmgr" x="13" y="234" width="282" height="28" />
+          <rect id="appmenu-addons" x="13" y="262" width="282" height="28" />
+          <rect id="appmenu-toolsmenu" x="13" y="298" width="282" height="28" />
+          <rect id="appmenu-help" x="13" y="326" width="282" height="28" />
+          <rect id="appmenu-quit" x="13" y="363" width="282" height="28" />
         </g>
         <g id="appmenu-newview" transform="translate(308, 0)">
           <clipPath id="appmenu-newview-clip">
-            <rect x="4" y="4" rx="8" width="300" height="399" />
+            <rect x="4" y="4" rx="8" width="300" height="396" />
           </clipPath>
-          <image href="images/appMenu-newView.png" x="0" y="0" width="308" height="407" clip-path="url(#appmenu-newview-clip)" />
-          <rect id="appmenu-newcreateemailaccountmenuitem" x="13" y="53" width="282" height="28" />
-          <rect id="appmenu-newmailaccountmenuitem" x="13" y="81" width="282" height="28" />
-          <rect id="appmenu-calendar-new-calendar-menu-item" x="13" y="109" width="282" height="28" />
-          <rect id="appmenu-newab" x="13" y="137" width="282" height="28" />
-          <rect id="appmenu-newimaccountmenuitem" x="13" y="165" width="282" height="28" />
-          <rect id="appmenu-newfeedaccountmenuitem" x="13" y="193" width="282" height="28" />
-          <rect id="appmenu-newnewsgroupaccountmenuitem" x="13" y="221" width="282" height="28" />
+          <image href="images/appMenu-newView.png" x="0" y="0" width="308" height="404" clip-path="url(#appmenu-newview-clip)" />
+          <rect id="appmenu-newmailaccountmenuitem" x="13" y="53" width="282" height="28" />
+          <rect id="appmenu-calendar-new-calendar-menu-item" x="13" y="81" width="282" height="28" />
+          <rect id="appmenu-newab" x="13" y="109" width="282" height="28" />
+          <rect id="appmenu-newimaccountmenuitem" x="13" y="137" width="282" height="28" />
+          <rect id="appmenu-newfeedaccountmenuitem" x="13" y="165" width="282" height="28" />
+          <rect id="appmenu-newnewsgroupaccountmenuitem" x="13" y="193" width="282" height="28" />
         </g>
         <g id="appmenu-newabview" transform="translate(308, 249)">
           <clipPath id="appmenu-newabview-clip">
-            <rect x="4" y="4" rx="8" width="300" height="399" />
+            <rect x="4" y="4" rx="8" width="300" height="396" />
           </clipPath>
-          <image href="images/appMenu-newabView.png" x="0" y="0" width="308" height="407" clip-path="url(#appmenu-newabview-clip)" />
+          <image href="images/appMenu-newabView.png" x="0" y="0" width="308" height="404" clip-path="url(#appmenu-newabview-clip)" />
           <rect id="appmenu-newabmenuitem" x="13" y="53" width="282" height="28" />
           <rect id="appmenu-newcarddavmenuitem" x="13" y="81" width="282" height="28" />
           <rect id="appmenu-newldapmenuitem" x="13" y="109" width="282" height="28" />
         </g>
         <g id="appmenu-createview" transform="translate(616, 0)">
           <clipPath id="appmenu-createview-clip">
-            <rect x="4" y="4" rx="8" width="300" height="399" />
+            <rect x="4" y="4" rx="8" width="300" height="396" />
           </clipPath>
-          <image href="images/appMenu-createView.png" x="0" y="0" width="308" height="407" clip-path="url(#appmenu-createview-clip)" />
+          <image href="images/appMenu-createView.png" x="0" y="0" width="308" height="404" clip-path="url(#appmenu-createview-clip)" />
           <rect id="appmenu-newnewmsgcmd" x="13" y="53" width="282" height="28" />
           <rect id="appmenu-calendar-new-event-menu-item" x="13" y="81" width="282" height="28" />
           <rect id="appmenu-calendar-new-task-menu-item" x="13" y="109" width="282" height="28" />
@@ -670,26 +727,26 @@
         </g>
         <g id="appmenu-openview" transform="translate(924, 0)">
           <clipPath id="appmenu-openview-clip">
-            <rect x="4" y="4" rx="8" width="300" height="399" />
+            <rect x="4" y="4" rx="8" width="300" height="396" />
           </clipPath>
-          <image href="images/appMenu-openView.png" x="0" y="0" width="308" height="407" clip-path="url(#appmenu-openview-clip)" />
+          <image href="images/appMenu-openView.png" x="0" y="0" width="308" height="404" clip-path="url(#appmenu-openview-clip)" />
           <rect id="appmenu-openmessagefilemenuitem" x="13" y="53" width="282" height="28" />
           <rect id="appmenu-opencalendarfilemenuitem" x="13" y="81" width="282" height="28" />
         </g>
         <g id="appmenu-viewview" transform="translate(1232, 0)">
           <clipPath id="appmenu-viewview-clip">
-            <rect x="4" y="4" rx="8" width="300" height="399" />
+            <rect x="4" y="4" rx="8" width="300" height="396" />
           </clipPath>
-          <image href="images/appMenu-viewView.png" x="0" y="0" width="308" height="407" clip-path="url(#appmenu-viewview-clip)" />
+          <image href="images/appMenu-viewView.png" x="0" y="0" width="308" height="404" clip-path="url(#appmenu-viewview-clip)" />
           <rect id="appmenu-toolbars" x="13" y="53" width="282" height="28" />
           <rect id="appmenu-messagepanelayout" x="13" y="81" width="282" height="28" />
           <rect id="appmenu-folderviews" x="13" y="109" width="282" height="28" />
         </g>
         <g id="appmenu-toolbarsview" transform="translate(1232, 137)">
           <clipPath id="appmenu-toolbarsview-clip">
-            <rect x="4" y="4" rx="8" width="300" height="399" />
+            <rect x="4" y="4" rx="8" width="300" height="396" />
           </clipPath>
-          <image href="images/appMenu-toolbarsView.png" x="0" y="0" width="308" height="407" clip-path="url(#appmenu-toolbarsview-clip)" />
+          <image href="images/appMenu-toolbarsView.png" x="0" y="0" width="308" height="404" clip-path="url(#appmenu-toolbarsview-clip)" />
           <rect id="appmenu-quickfilterbar" x="13" y="81" width="282" height="28" />
           <rect id="appmenu-spacestoolbar" x="13" y="109" width="282" height="28" />
           <rect id="appmenu-showstatusbar" x="13" y="137" width="282" height="28" />
@@ -697,61 +754,61 @@
         </g>
         <g id="appmenu-preferenceslayoutview" transform="translate(1232, 339)">
           <clipPath id="appmenu-preferenceslayoutview-clip">
-            <rect x="4" y="4" rx="8" width="300" height="399" />
+            <rect x="4" y="4" rx="8" width="300" height="396" />
           </clipPath>
-          <image href="images/appMenu-preferencesLayoutView.png" x="0" y="0" width="308" height="407" clip-path="url(#appmenu-preferenceslayoutview-clip)" />
+          <image href="images/appMenu-preferencesLayoutView.png" x="0" y="0" width="308" height="404" clip-path="url(#appmenu-preferenceslayoutview-clip)" />
           <rect id="appmenu-messagepaneclassic" x="13" y="53" width="282" height="28" />
           <rect id="appmenu-messagepanewide" x="13" y="81" width="282" height="28" />
           <rect id="appmenu-messagepanevertical" x="13" y="109" width="282" height="28" />
           <rect id="appmenu-showfolderpane" x="13" y="146" width="282" height="28" />
           <rect id="appmenu-togglethreadpaneheader" x="13" y="174" width="282" height="28" />
           <rect id="appmenu-showmessage" x="13" y="202" width="282" height="28" />
-          <rect id="appmenu-calshowtodaypane-2" x="13" y="239" width="282" height="28" />
+          <rect id="appmenu-calshowtodaypane-2" x="13" y="238" width="282" height="28" />
         </g>
         <g id="appmenu-foldersview" transform="translate(1232, 606)">
           <clipPath id="appmenu-foldersview-clip">
-            <rect x="4" y="4" rx="8" width="300" height="399" />
+            <rect x="4" y="4" rx="8" width="300" height="396" />
           </clipPath>
-          <image href="images/appMenu-foldersView.png" x="0" y="0" width="308" height="407" clip-path="url(#appmenu-foldersview-clip)" />
+          <image href="images/appMenu-foldersView.png" x="0" y="0" width="308" height="404" clip-path="url(#appmenu-foldersview-clip)" />
           <rect id="appmenu-togglefolderheader" x="13" y="53" width="282" height="28" />
           <rect id="appmenu-allfolders" x="13" y="90" width="282" height="28" />
           <rect id="appmenu-smartfolders" x="13" y="118" width="282" height="28" />
           <rect id="appmenu-unreadfolders" x="13" y="146" width="282" height="28" />
           <rect id="appmenu-favoritefolders" x="13" y="174" width="282" height="28" />
           <rect id="appmenu-recentfolders" x="13" y="202" width="282" height="28" />
-          <rect id="appmenu-tagsfolders" x="13" y="239" width="282" height="28" />
-          <rect id="appmenu-compactmode" x="13" y="276" width="282" height="28" />
-          <rect id="appmenu-favoritefolder" x="13" y="313" width="282" height="28" />
-          <rect id="appmenu-properties" x="13" y="341" width="282" height="28" />
+          <rect id="appmenu-tagsfolders" x="13" y="238" width="282" height="28" />
+          <rect id="appmenu-compactmode" x="13" y="275" width="282" height="28" />
+          <rect id="appmenu-favoritefolder" x="13" y="311" width="282" height="28" />
+          <rect id="appmenu-properties" x="13" y="339" width="282" height="28" />
         </g>
         <g id="appmenu-toolsview" transform="translate(1540, 0)">
           <clipPath id="appmenu-toolsview-clip">
-            <rect x="4" y="4" rx="8" width="300" height="399" />
+            <rect x="4" y="4" rx="8" width="300" height="396" />
           </clipPath>
-          <image href="images/appMenu-toolsView.png" x="0" y="0" width="308" height="407" clip-path="url(#appmenu-toolsview-clip)" />
+          <image href="images/appMenu-toolsView.png" x="0" y="0" width="308" height="404" clip-path="url(#appmenu-toolsview-clip)" />
           <rect id="appmenu-import" x="13" y="53" width="282" height="28" />
           <rect id="appmenu-export" x="13" y="81" width="282" height="28" />
-          <rect id="appmenu-searchcmd" x="13" y="118" width="282" height="28" />
-          <rect id="appmenu-filterscmd" x="13" y="146" width="282" height="28" />
-          <rect id="appmenu-managekeysopenpgp" x="13" y="174" width="282" height="28" />
-          <rect id="appmenu-opensavedfileswnd" x="13" y="202" width="282" height="28" />
-          <rect id="appmenu-activitymanager" x="13" y="230" width="282" height="28" />
-          <rect id="appmenu-devtoolstoolbox" x="13" y="267" width="282" height="28" />
+          <rect id="appmenu-exportmobile" x="13" y="109" width="282" height="28" />
+          <rect id="appmenu-searchcmd" x="13" y="146" width="282" height="28" />
+          <rect id="appmenu-filterscmd" x="13" y="174" width="282" height="28" />
+          <rect id="appmenu-managekeysopenpgp" x="13" y="202" width="282" height="28" />
+          <rect id="appmenu-opensavedfileswnd" x="13" y="230" width="282" height="28" />
+          <rect id="appmenu-activitymanager" x="13" y="258" width="282" height="28" />
+          <rect id="appmenu-devtoolstoolbox" x="13" y="294" width="282" height="28" />
         </g>
         <g id="appmenu-helpview" transform="translate(1848, 0)">
           <clipPath id="appmenu-helpview-clip">
-            <rect x="4" y="4" rx="8" width="300" height="399" />
+            <rect x="4" y="4" rx="8" width="300" height="396" />
           </clipPath>
-          <image href="images/appMenu-helpView.png" x="0" y="0" width="308" height="407" clip-path="url(#appmenu-helpview-clip)" />
+          <image href="images/appMenu-helpView.png" x="0" y="0" width="308" height="404" clip-path="url(#appmenu-helpview-clip)" />
           <rect id="appmenu-openhelp" x="13" y="53" width="282" height="28" />
-          <rect id="appmenu-opentour" x="13" y="81" width="282" height="28" />
-          <rect id="appmenu-keyboardshortcuts" x="13" y="109" width="282" height="28" />
-          <rect id="appmenu-getinvolved" x="13" y="146" width="282" height="28" />
-          <rect id="appmenu-makedonation" x="13" y="174" width="282" height="28" />
-          <rect id="appmenu-submitfeedback" x="13" y="202" width="282" height="28" />
-          <rect id="appmenu-troubleshootmode" x="13" y="239" width="282" height="28" />
-          <rect id="appmenu-troubleshootinginfo" x="13" y="267" width="282" height="28" />
-          <rect id="appmenu-about" x="13" y="304" width="282" height="28" />
+          <rect id="appmenu-keyboardshortcuts" x="13" y="81" width="282" height="28" />
+          <rect id="appmenu-getinvolved" x="13" y="118" width="282" height="28" />
+          <rect id="appmenu-makedonation" x="13" y="146" width="282" height="28" />
+          <rect id="appmenu-submitfeedback" x="13" y="174" width="282" height="28" />
+          <rect id="appmenu-troubleshootmode" x="13" y="210" width="282" height="28" />
+          <rect id="appmenu-troubleshootinginfo" x="13" y="238" width="282" height="28" />
+          <rect id="appmenu-about" x="13" y="275" width="282" height="28" />
         </g>
       </svg>
     </section>
